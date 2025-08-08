@@ -1,0 +1,23 @@
+{
+    "name": "Elfi's Angels - Premium Mini Poodle Puppies",
+    "short_name": "Elfi's Angels",
+    "description": "Premium AKC American Champion Mini Poodle puppies for sale in Chennai, India. KCI certified, fully vaccinated, potty trained.",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "theme_color": "#0a0a0a",
+    "background_color": "#0a0a0a",
+    "icons": [
+        {
+            "src": "logo.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["business", "lifestyle", "shopping"],
+    "lang": "en",
+    "dir": "ltr",
+    "scope": "/",
+    "prefer_related_applications": false
+}

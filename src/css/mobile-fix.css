@@ -1,0 +1,324 @@
+/*
+============================================
+ELFI'S ANGELS - MOBILE OPTIMIZATION CSS
+============================================
+Critical mobile-specific fixes for performance
+This file only loads on mobile devices (max-width: 768px)
+Main purpose: Disable all animations for better performance
+
+Key Features:
+- Complete animation removal for performance
+- Mobile-specific layout optimizations
+- Touch-friendly interface improvements
+- Accessibility enhancements for mobile
+- Performance-first approach
+
+Issue Solved: Mobile devices showing blank screen due to 
+animation conflicts and performance issues
+
+Author: Development Team
+Last Updated: August 2025
+Version: 2.0 (Mobile Performance Focus)
+============================================
+*/
+
+/* ============================================ */
+/* MOBILE-ONLY MEDIA QUERY */
+/* ============================================ */
+/* This entire file only applies to mobile devices */
+/* Using max-width: 768px to target phones and small tablets */
+
+@media only screen and (max-width: 768px) {
+    
+    /* ============================================ */
+    /* 1. CRITICAL: DISABLE ALL ANIMATIONS */
+    /* ============================================ */
+    /* This is the most important fix for mobile performance */
+    /* Removes all animations, transitions, and transforms */
+    
+    /* Universal animation removal - affects all elements */
+    * {
+        animation: none !important;                    /* Remove all keyframe animations */
+        transition: none !important;                   /* Remove all CSS transitions */
+        transform: none !important;                    /* Remove all transforms */
+        animation-duration: 0s !important;            /* Force 0 second duration */
+        transition-duration: 0s !important;           /* Force 0 second transitions */
+        animation-delay: 0s !important;               /* Remove animation delays */
+        transition-delay: 0s !important;              /* Remove transition delays */
+        animation-fill-mode: none !important;         /* Disable fill modes */
+        animation-iteration-count: 0 !important;      /* Stop iteration counts */
+        animation-play-state: paused !important;      /* Pause any animations */
+    }
+    
+    /* Remove animations from pseudo-elements */
+    *::before, *::after {
+        animation: none !important;                    /* Remove pseudo-element animations */
+        transition: none !important;                   /* Remove pseudo-element transitions */
+        transform: none !important;                    /* Remove pseudo-element transforms */
+    }
+    
+    /* ============================================ */
+    /* 2. AOS (ANIMATE ON SCROLL) LIBRARY FIXES */
+    /* ============================================ */
+    /* Force AOS elements to be visible and static */
+    
+    [data-aos] {
+        opacity: 1 !important;                        /* Make AOS elements visible */
+        transform: none !important;                   /* Remove AOS transforms */
+        animation: none !important;                   /* Remove AOS animations */
+        transition: none !important;                  /* Remove AOS transitions */
+        visibility: visible !important;               /* Force visibility */
+    }
+    
+    /* ============================================ */
+    /* 3. BODY AND PAGE FOUNDATION */
+    /* ============================================ */
+    /* Ensure basic page structure is stable on mobile */
+    
+    body {
+        overflow-x: hidden !important;                /* Prevent horizontal scroll */
+        background: #0a0a0a !important;              /* Consistent dark background */
+        color: white !important;                      /* Ensure readable text */
+        min-height: 100vh !important;                /* Full viewport height */
+        opacity: 1 !important;                       /* Force body visibility */
+        transform: none !important;                  /* Remove any body transforms */
+    }
+    
+    /* ============================================ */
+    /* 4. MOBILE NAVIGATION SYSTEM */
+    /* ============================================ */
+    /* Optimized navigation for touch devices */
+    
+    /* Fixed navigation bar */
+    .navbar {
+        display: block !important;                    /* Ensure navbar is visible */
+        position: fixed !important;                   /* Keep at top when scrolling */
+        top: 0 !important;                           /* Position at very top */
+        width: 100% !important;                      /* Full width */
+        background: rgba(0, 0, 0, 0.95) !important; /* Semi-transparent background */
+        padding: 15px !important;                    /* Touch-friendly padding */
+        z-index: 1000 !important;                    /* Above all other content */
+    }
+    
+    /* Navigation container layout */
+    .nav-container {
+        display: flex !important;                     /* Flex layout for navbar */
+        justify-content: space-between !important;    /* Logo left, menu right */
+        align-items: center !important;              /* Vertically center items */
+    }
+    
+    /* Logo styling for mobile */
+    .logo, .logo-svg {
+        display: block !important;                    /* Ensure logo is visible */
+        color: white !important;                      /* White logo text */
+        height: 40px !important;                     /* Appropriate mobile size */
+    }
+    
+    /* Hamburger menu button */
+    .hamburger {
+        display: flex !important;                     /* Show hamburger on mobile */
+        flex-direction: column !important;           /* Stack bars vertically */
+        width: 30px !important;                      /* Touch-friendly width */
+        height: 25px !important;                     /* Touch-friendly height */
+        justify-content: space-between !important;    /* Space bars evenly */
+        cursor: pointer !important;                  /* Indicate clickable */
+        background: none !important;                 /* No background */
+        border: none !important;                     /* No border */
+        padding: 0 !important;                       /* No extra padding */
+    }
+    
+    /* Hamburger menu bars */
+    .hamburger .bar {
+        width: 100% !important;                      /* Full width bars */
+        height: 3px !important;                      /* Visible thickness */
+        background: white !important;                /* White color for contrast */
+        display: block !important;                   /* Ensure bars are visible */
+        transition: none !important;                 /* No animations */
+        transform: none !important;                  /* No transforms */
+        animation: none !important;                  /* No animations */
+    }
+    
+    /* Mobile navigation menu */
+    .nav-menu {
+        position: fixed !important;                   /* Fixed positioning */
+        left: -100% !important;                      /* Hidden by default */
+        top: 60px !important;                        /* Below navbar */
+        width: 100% !important;                      /* Full screen width */
+        height: calc(100vh - 60px) !important;       /* Remaining screen height */
+        background: rgba(0, 0, 0, 0.95) !important;  /* Dark background */
+        display: flex !important;                    /* Flex layout */
+        flex-direction: column !important;           /* Vertical menu items */
+        justify-content: flex-start !important;       /* Align to top */
+        align-items: center !important;              /* Center horizontally */
+        padding: 2rem 0 !important;                  /* Top/bottom padding */
+        transition: none !important;                 /* No animations */
+        list-style: none !important;                 /* Remove list bullets */
+        z-index: 999 !important;                     /* Below navbar, above content */
+        transform: none !important;                  /* No transforms */
+        animation: none !important;                  /* No animations */
+    }
+    
+    /* Active state for mobile menu (when hamburger is clicked) */
+    .nav-menu.active {
+        left: 0 !important;                          /* Slide into view */
+        transition: none !important;                 /* No animations */
+        transform: none !important;                  /* No transforms */
+        animation: none !important;                  /* No animations */
+    }
+    
+    /* Navigation menu items */
+    .nav-menu li {
+        margin: 1rem 0 !important;                   /* Vertical spacing */
+        width: 90% !important;                       /* Nearly full width */
+    }
+    
+    /* Navigation links styling */
+    .nav-link {
+        display: block !important;                   /* Block level for full touch area */
+        color: white !important;                     /* White text */
+        text-decoration: none !important;            /* No underlines */
+        padding: 1rem !important;                    /* Touch-friendly padding */
+        font-size: 1.2rem !important;               /* Readable size */
+        text-align: center !important;              /* Center text */
+        border-radius: 8px !important;              /* Rounded corners */
+        transition: background 0.3s !important;      /* Only background transition */
+    }
+    
+    /* Navigation link hover/touch state */
+    .nav-link:hover {
+        background: rgba(255, 255, 255, 0.1) !important; /* Light background on touch */
+        transition: none !important;                 /* No other transitions */
+        transform: none !important;                  /* No transforms */
+        animation: none !important;                  /* No animations */
+    }
+    
+    /* ============================================ */
+    /* 5. MOBILE HERO SECTION OPTIMIZATION */
+    /* ============================================ */
+    /* Hero section optimized for mobile viewing */
+    
+    .hero {
+        display: flex !important;                     /* Flex layout */
+        flex-direction: column !important;           /* Stack vertically */
+        padding: 80px 20px 40px !important;          /* Account for navbar + padding */
+        min-height: 100vh !important;                /* Full screen height */
+        text-align: center !important;               /* Center all content */
+        justify-content: center !important;          /* Center vertically */
+        background: #0a0a0a !important;              /* Dark background */
+        opacity: 1 !important;                       /* Force visibility */
+        transform: none !important;                  /* No transforms */
+        animation: none !important;                  /* No animations */
+        transition: none !important;                 /* No transitions */
+    }
+    
+    /* Hero content container */
+    .hero-content {
+        display: block !important;                   /* Block display */
+        margin-bottom: 2rem !important;              /* Space before image */
+        opacity: 1 !important;                       /* Force visibility */
+        transform: none !important;                  /* No transforms */
+        animation: none !important;                  /* No animations */
+        transition: none !important;                 /* No transitions */
+    }
+    
+    /* Hero main heading */
+    .hero-content h1 {
+        display: block !important;                   /* Block display */
+        font-size: 2.2rem !important;               /* Mobile-optimized size */
+        color: white !important;                     /* White text */
+        margin-bottom: 1rem !important;              /* Space below */
+        line-height: 1.3 !important;                /* Tight line height */
+    }
+    
+    /* Hero paragraphs */
+    .hero-content p {
+        display: block !important;                   /* Block display */
+        font-size: 1rem !important;                 /* Readable size */
+        color: #ccc !important;                      /* Light gray text */
+        margin-bottom: 1rem !important;              /* Space below */
+    }
+    
+    /* Hero image container */
+    .hero-image {
+        display: block !important;                   /* Block display */
+        padding: 1rem 0 !important;                  /* Top/bottom padding */
+    }
+    
+    /* Hero image styling */
+    .hero-image img {
+        max-width: 100% !important;                  /* Responsive width */
+        max-height: 40vh !important;                 /* Limit height */
+        border-radius: 15px !important;              /* Rounded corners */
+    }
+    
+    /* Hero buttons container */
+    .hero-buttons {
+        display: flex !important;                    /* Flex layout */
+        flex-direction: column !important;           /* Stack vertically */
+        gap: 1rem !important;                        /* Space between buttons */
+        align-items: center !important;              /* Center horizontally */
+    }
+    
+    /* Button styling for mobile */
+    .btn {
+        display: inline-block !important;            /* Inline-block for centering */
+        padding: 15px 30px !important;               /* Touch-friendly padding */
+        background: #ff6b6b !important;              /* Bright accent color */
+        color: white !important;                     /* White text */
+        text-decoration: none !important;            /* No underlines */
+        border-radius: 25px !important;              /* Rounded button */
+        font-size: 1rem !important;                 /* Readable size */
+        min-height: 44px !important;                /* Touch-friendly height */
+        width: auto !important;                      /* Auto width */
+        max-width: 280px !important;                /* Maximum width */
+    }
+    
+    /* ============================================ */
+    /* 6. CONTENT SECTIONS MOBILE OPTIMIZATION */
+    /* ============================================ */
+    /* General section optimizations for mobile */
+    
+    /* Main content sections */
+    .about, .puppies, .contact {
+        display: block !important;                   /* Block display */
+        padding: 40px 20px !important;               /* Consistent padding */
+    }
+    
+    /* About section content */
+    .about-content {
+        display: block !important;                   /* Block layout */
+    }
+    
+    /* Puppies grid for mobile */
+    .puppies-grid {
+        display: grid !important;                    /* Grid layout */
+        grid-template-columns: 1fr !important;       /* Single column */
+        gap: 1.5rem !important;                      /* Space between cards */
+    }
+    
+    /* Individual puppy cards */
+    .puppy-card {
+        display: block !important;                   /* Block display */
+        background: #1a1a1a !important;              /* Dark card background */
+        border-radius: 15px !important;              /* Rounded corners */
+        overflow: hidden !important;                 /* Clip content to border */
+        margin-bottom: 1rem !important;              /* Space below each card */
+    }
+    
+    /* ============================================ */
+    /* 7. UNIVERSAL MOBILE FIXES */
+    /* ============================================ */
+    /* Final catch-all fixes for mobile */
+    
+    /* Force all sections to be visible */
+    section {
+        display: block !important;                   /* Ensure all sections show */
+    }
+    
+    /* Container responsiveness */
+    .container {
+        max-width: 100% !important;                  /* Full width on mobile */
+        padding: 0 15px !important;                  /* Side padding for readability */
+    }
+    
+} /* End of mobile media query */

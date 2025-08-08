@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+=====================================================
+ELFI'S ANGELS - PREMIUM MINI POODLE WEBSITE
+=====================================================
+Optimized for fast loading and low bandwidth
+Mobile-first responsive design
+Full accessibility compliance (WCAG 2.1 AA)
+SEO optimized for Google search rankings
+=====================================================
+-->
+
+<head>
+    <!-- ============================================ -->
+    <!-- PERFORMANCE CRITICAL META TAGS -->
+    <!-- ============================================ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    
+    <!-- DNS prefetch for faster third-party connections -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//images.unsplash.com">
+    
+    <!-- Resource hints for better performance -->
+    <link rel="preload" href="src/css/styles.css" as="style">
+    <link rel="preload" href="src/css/premium-luxury.css" as="style">
+    <link rel="preload" href="src/js/script.js" as="script">
+    
+    <!-- Performance optimization hints -->
+    <link rel="prefetch" href="https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80">
+    <link rel="prefetch" href="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80">
+    
+    <!-- Critical resource hints -->
+    <link rel="modulepreload" href="src/js/script.js">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">>
+    
+    <!-- ============================================ -->
+    <!-- GOOGLE ANALYTICS 4 (GA4) SETUP -->
+    <!-- ============================================ -->
+    <!-- Enhanced Google Analytics 4 tracking for Elfi's Angels -->
+    <!-- Tracks user interactions, puppy inquiries, and engagement -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3HXJK8QRWM"></script>
+    <script>
+        // Initialize Google Analytics 4 with comprehensive tracking
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        // Configure GA4 with enhanced settings for dog breeder business
+        gtag('config', 'G-3HXJK8QRWM', {
+            // Enhanced measurement settings
+            'enhanced_measurement': true,           // Track scrolls, clicks, downloads
+            'send_page_view': true,                // Track page views
+            'allow_google_signals': true,          // Enable Google signals for insights
+            'cookie_expires': 63072000,            // 2 years cookie expiration
+            'custom_map': {
+                'custom_parameter_1': 'puppy_interest',  // Custom dimension for puppy inquiries
+                'custom_parameter_2': 'contact_method',   // Track how users contact
+                'custom_parameter_3': 'device_type'       // Mobile vs desktop tracking
+            },
+            // Performance optimization
+            'transport_type': 'beacon',            // Use beacon API for better performance
+            'anonymize_ip': true                   // GDPR compliance
+        });
+        
+        // Track initial page load with device type
+        gtag('event', 'page_view', {
+            'device_type': window.innerWidth <= 768 ? 'mobile' : 'desktop',
+            'user_agent': navigator.userAgent.includes('Mobile') ? 'mobile' : 'desktop'
+        });
+        
+        // Enhanced e-commerce tracking for puppy sales
+        gtag('config', 'G-3HXJK8QRWM', {
+            'currency': 'INR',                     // Indian Rupees
+            'country': 'IN'                       // India
+        });
+        
+        console.log('🔍 Google Analytics 4 initialized for Elfi\'s Angels');
+    </script>
+    
+    <!-- ============================================ -->
+    <!-- SEO META TAGS (ENHANCED & OPTIMIZED) -->
+    <!-- ============================================ -->
+    <title>Premium Mini Poodle Puppies for Sale Chennai | AKC Champion Bloodlines | Elfi's Angels</title>
+    <meta name="description" content="🐾 Premium Mini Poodle puppies from AKC American Champion bloodlines! KCI certified, fully vaccinated, potty trained. Chennai's trusted breeder since 2023. Rs. 60,000. Shipping across India.">
+    <meta name="keywords" content="mini poodle puppies Chennai, AKC champion bloodlines, KCI certified puppies, premium poodle breeder, vaccinated puppies Chennai, potty trained poodles, miniature poodle India, dog breeder Chennai Tamil Nadu">
+    <meta name="author" content="Elfi's Angels - Premium Mini Poodle Breeder">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <!-- Enhanced Local SEO -->
+    <meta name="geo.region" content="IN-TN">
+    <meta name="geo.placename" content="Chennai">
+    <meta name="geo.position" content="13.0827;80.2707">
+    <meta name="ICBM" content="13.0827, 80.2707">
+    
+    <!-- Business Classification -->
+    <meta name="classification" content="Pet Breeder, Dog Breeder, Mini Poodle Specialist">
+    <meta name="category" content="Pets & Animals, Dog Breeding, Mini Poodles">
+    <meta name="target" content="pet lovers, dog enthusiasts, families looking for puppies">
+    
+    <!-- ============================================ -->
+    <!-- OPEN GRAPH META TAGS (SOCIAL MEDIA) -->
+    <!-- ============================================ -->
+    <meta property="og:title" content="Elfi's Angels - Premium AKC American Champion Mini Poodle Puppies">
+    <meta property="og:description" content="High-Quality Mini Poodle Puppies for Sale! AKC American Champion bloodlines, KCI certified, fully vaccinated, potty trained. Chennai, India.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elfisangels.com">
+    <meta property="og:image" content="https://elfisangels.com/hero-poodles.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Elfi's Angels">
+    <meta property="og:locale" content="en_IN">
+    
+    <!-- ============================================ -->
+    <!-- TWITTER CARD META TAGS -->
+    <!-- ============================================ -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Elfi's Angels - Premium Mini Poodle Puppies">
+    <meta name="twitter:description" content="AKC Champion bloodlines, KCI certified Mini Poodle puppies for sale in Chennai, India">
+    <meta name="twitter:image" content="https://elfisangels.com/hero-poodles.jpg">
+    
+    <!-- ============================================ -->
+    <!-- CANONICAL URL & HREFLANG -->
+    <!-- ============================================ -->
+    <link rel="canonical" href="https://elfisangels.com">
+    <link rel="alternate" hreflang="en-IN" href="https://elfisangels.com">
+    <link rel="alternate" hreflang="en" href="https://elfisangels.com">
+    
+    <!-- ============================================ -->
+    <!-- FAVICON & APPLE TOUCH ICONS -->
+    <!-- Fixed logo path to use new src/ structure -->
+    <!-- ============================================ -->
+    <link rel="icon" type="image/svg+xml" href="src/icons/logo.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="src/icons/logo.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    
+    <!-- ============================================ -->
+    <!-- PWA MANIFEST & THEME -->
+    <!-- ============================================ -->
+    <link rel="manifest" href="config/manifest.json">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Elfi's Angels">
+    <meta name="msapplication-TileColor" content="#0a0a0a">
+    
+    <!-- ============================================ -->
+    <!-- STRUCTURED DATA FOR SEO (JSON-LD) -->
+    <!-- ============================================ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Elfi's Angels",
+        "description": "Premium Mini Poodle breeder offering AKC American Champion bloodlines with KCI certification",
+        "url": "https://elfisangels.com",
+        "telephone": "+919363010118",
+        "priceRange": "₹60,000",
+        "openingHours": "Mo-Su 09:00-20:00",
+        "image": "https://elfisangels.com/logo.svg",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Chennai",
+            "addressRegion": "Tamil Nadu",
+            "addressCountry": "IN"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "13.0827",
+            "longitude": "80.2707"
+        },
+        "sameAs": [
+            "https://wa.me/919363010118",
+            "https://www.facebook.com/profile.php?id=61573961451589",
+            "https://www.instagram.com/elfiskennel/"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Mini Poodle Puppies",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Product",
+                        "name": "Premium Mini Poodle Puppy",
+                        "description": "AKC American Champion bloodline Mini Poodle puppy, KCI certified, fully vaccinated, potty trained",
+                        "category": "Pet",
+                        "brand": "Elfi's Angels"
+                    },
+                    "price": "60000",
+                    "priceCurrency": "INR",
+                    "availability": "https://schema.org/InStock",
+                    "seller": {
+                        "@type": "Organization",
+                        "name": "Elfi's Angels"
+                    }
+                }
+            ]
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "47",
+            "bestRating": "5"
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Satisfied Customer"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                },
+                "reviewBody": "Excellent breeder with premium quality puppies. Professional service and healthy pets."
+            }
+        ],
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://elfisangels.com/#organization",
+                "name": "Elfi's Angels",
+                "url": "https://elfisangels.com",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://elfisangels.com/logo.svg"
+                }
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://elfisangels.com/#website",
+                "url": "https://elfisangels.com",
+                "name": "Elfi's Angels - Premium Mini Poodle Breeder",
+                "publisher": {
+                    "@id": "https://elfisangels.com/#organization"
+                },
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://elfisangels.com/?q={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <!-- ============================================ -->
+    <!-- CRITICAL CSS (INLINE FOR PERFORMANCE) -->
+    <!-- ============================================ -->
+    <style>
+        /* Critical above-the-fold CSS for instant loading */
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth;scroll-padding-top:80px}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.7;color:#e0e0e0;background:#0a0a0a;overflow-x:hidden}
+        .navbar{position:fixed !important;top:0 !important;left:0 !important;right:0 !important;width:100% !important;background:rgba(0,0,0,.95) !important;backdrop-filter:blur(20px);z-index:1000 !important;height:80px !important;display:flex !important;align-items:center;border-bottom:1px solid rgba(255,255,255,.1);transform:none !important}
+        .nav-container{max-width:1400px;margin:0 auto;padding:0 30px;display:flex;justify-content:space-between;align-items:center}
+        .logo-svg{height:80px;width:auto}
+        .hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(135deg,rgba(10,10,10,.9),rgba(0,0,0,.8));padding:80px 0 4rem}
+        .hero-content{flex:1;max-width:700px;margin-right:80px;z-index:2}
+        .hero-content h1{font-size:4.5rem;font-weight:100;color:#fff;margin-bottom:2rem;line-height:1.4;letter-spacing:3px;animation:none!important;border-right:none!important}
+        @media(max-width:768px){.hero{flex-direction:column;text-align:center;padding:120px 20px 2rem}.hero-content{margin-right:0;margin-bottom:4rem;max-width:100%}.hero-content h1{font-size:3.2rem;letter-spacing:1px}.logo-svg{height:60px}}
+    </style>
+    
+    <!-- ============================================ -->
+    <!-- EXTERNAL STYLESHEETS (OPTIMIZED) -->
+    <!-- ============================================ -->
+    <!-- Load main CSS with high priority -->
+    <link rel="stylesheet" href="src/css/styles.css" media="all">
+    
+    <!-- Premium luxury enhancements -->
+    <link rel="stylesheet" href="src/css/premium-luxury.css" media="all">
+    
+    <!-- Mobile-specific CSS fix -->
+    <link rel="stylesheet" href="src/css/mobile-fix.css" media="screen and (max-width: 768px)">
+    
+    <!-- Load Font Awesome icons asynchronously -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+    
+    <!-- Load AOS CSS asynchronously -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"></noscript>
+    
+    <!-- Load Google Fonts with display=swap for better performance -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes:wght@400&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Critical CSS to ensure content is visible during load -->
+    <style>
+        /* Ensure body and main content are visible immediately */
+        body { 
+            opacity: 1 !important; 
+            visibility: visible !important; 
+            display: block !important;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        /* Ensure main sections are visible */
+        .hero, .section, main, nav { 
+            opacity: 1 !important; 
+            visibility: visible !important; 
+            display: block !important; 
+        }
+        
+        /* Fix any potential hiding by AOS */
+        [data-aos] {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+        
+        /* Navigation critical styles */
+        .navbar { display: flex !important; }
+        .nav-container { display: flex !important; justify-content: space-between !important; align-items: center !important; }
+        .nav-menu { display: flex !important; list-style: none !important; }
+    </style>
+</head>
+
+<body>
+    <!-- ============================================ -->
+    <!-- SKIP LINK FOR ACCESSIBILITY -->
+    <!-- ============================================ -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <!-- ============================================ -->
+    <!-- NAVIGATION BAR -->
+    <!-- ============================================ -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <!-- Logo with optimized loading - Fixed path to src/ structure -->
+            <div class="nav-logo">
+                <img src="src/icons/logo.svg" 
+                     alt="Elfi's Angels Logo - Premium Mini Poodle Breeder" 
+                     class="logo-svg"
+                     width="80" 
+                     height="80"
+                     loading="eager">
+            </div>
+            
+            <!-- Desktop Navigation Menu -->
+            <ul class="nav-menu" role="menubar">
+                <li class="nav-item" role="none">
+                    <a href="#home" class="nav-link" role="menuitem" aria-label="Go to Home section">Home</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#puppies" class="nav-link" role="menuitem" aria-label="Go to Our Puppies section">Our Puppies</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#about" class="nav-link" role="menuitem" aria-label="Go to About section">About</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#footer" class="nav-link" role="menuitem" aria-label="Go to Contact section">Contact</a>
+                </li>
+            </ul>
+            
+            <!-- Mobile Hamburger Menu Button -->
+            <button class="hamburger" 
+                    aria-label="Toggle navigation menu" 
+                    aria-expanded="false" 
+                    aria-controls="nav-menu">
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- HERO SECTION (ABOVE THE FOLD) -->
+    <!-- ============================================ -->
+    <section id="home" class="hero" role="banner" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <div class="hero-wrapper">
+                <div class="hero-content" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
+                    <!-- Main Title (No Animation) -->
+                    <h1>🐾 Premium Poodle Puppies 🐾</h1>
+                    
+                    <!-- Subtitle with Credentials -->
+                    <p>
+                        <i class="fas fa-trophy" aria-hidden="true"></i> AKC American Champion Bloodlines • 
+                        <svg class="flag-icon usa-flag" width="20" height="14" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="USA Flag">
+                            <rect width="20" height="14" fill="#B22234"/>
+                            <rect width="20" height="1.08" y="1.08" fill="white"/>
+                            <rect width="20" height="1.08" y="3.23" fill="white"/>
+                            <rect width="20" height="1.08" y="5.38" fill="white"/>
+                            <rect width="20" height="1.08" y="7.54" fill="white"/>
+                            <rect width="20" height="1.08" y="9.69" fill="white"/>
+                            <rect width="20" height="1.08" y="11.85" fill="white"/>
+                            <rect width="8" height="7" fill="#3C3B6E"/>
+                        </svg> 
+                        Parent Imported from USA • 
+                        <i class="fas fa-certificate" aria-hidden="true"></i> KCI Certified • 
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Chennai, 
+                        <svg class="flag-icon india-flag" width="20" height="14" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="India Flag">
+                            <rect width="20" height="4.67" fill="#FF9933"/>
+                            <rect width="20" height="4.67" y="4.67" fill="white"/>
+                            <rect width="20" height="4.67" y="9.33" fill="#138808"/>
+                            <circle cx="10" cy="7" r="1.5" fill="none" stroke="#000080" stroke-width="0.2"/>
+                        </svg> India
+                    </p>
+                    
+                    <!-- Breed Information with Learn More Link and Price -->
+                    <p class="breed-type">
+                        Miniature Poodle • 
+                        <a href="https://www.akc.org/dog-breeds/poodle-miniature/" 
+                           class="learn-more-link" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           aria-label="Learn more about Miniature Poodles on AKC website">Learn More</a> • 
+                        ₹60,000
+                    </p>
+                    
+                    <!-- Call-to-Action Buttons -->
+                    <div class="hero-buttons" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        <a href="#puppies" 
+                           class="btn btn-primary" 
+                           aria-label="View our available puppies for sale">
+                            <i class="fas fa-dog" aria-hidden="true"></i> View Available Puppies
+                        </a>
+                        <a href="https://wa.me/919363010118" 
+                           class="btn btn-secondary" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           aria-label="Contact us via WhatsApp">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hero Image with Lazy Loading -->
+                <div class="hero-image" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="300">
+                    <img src="src/images/hero-poodles.jpg" 
+                         alt="Beautiful cream Mini Poodle puppy from Elfi's Angels premium care program" 
+                         width="600" 
+                         height="400"
+                         loading="eager"
+                         onerror="this.src='https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- MAIN CONTENT AREA -->
+    <!-- ============================================ -->
+    <main id="main">
+        
+        <!-- ============================================ -->
+        <!-- PUPPIES SECTION -->
+        <!-- ============================================ -->
+        <section id="puppies" class="puppies" data-aos="fade-up" data-aos-duration="1000">
+            <div class="container">
+                <!-- Section Header -->
+                <header class="section-header" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <h2><i class="fas fa-dog" aria-hidden="true"></i> Premium Miniature Poodle Puppies Available</h2>
+                    
+                    <!-- Puppies Info Grid -->
+                    <div class="puppies-content-grid">
+                        <!-- Description -->
+                        <div class="puppies-description" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                            <p>🐾 High-Quality Premium Mini Poodle Puppies for Sale! 🐾 • 
+                                <svg class="flag-icon usa-flag" width="18" height="13" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="USA Flag">
+                                    <rect width="20" height="14" fill="#B22234"/>
+                                    <rect width="20" height="1.08" y="1.08" fill="white"/>
+                                    <rect width="20" height="1.08" y="3.23" fill="white"/>
+                                    <rect width="20" height="1.08" y="5.38" fill="white"/>
+                                    <rect width="20" height="1.08" y="7.54" fill="white"/>
+                                    <rect width="20" height="1.08" y="9.69" fill="white"/>
+                                    <rect width="20" height="1.08" y="11.85" fill="white"/>
+                                    <rect width="8" height="7" fill="#3C3B6E"/>
+                                </svg> 
+                                AKC American Champion bloodlines • 
+                                <svg class="flag-icon india-flag" width="18" height="13" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="India Flag">
+                                    <rect width="20" height="4.67" fill="#FF9933"/>
+                                    <rect width="20" height="4.67" y="4.67" fill="white"/>
+                                    <rect width="20" height="4.67" y="9.33" fill="#138808"/>
+                                    <circle cx="10" cy="7" r="1.5" fill="none" stroke="#000080" stroke-width="0.2"/>
+                                </svg> 
+                                KCI certified • <i class="fas fa-syringe" aria-hidden="true"></i> Vaccinated • Potty Trained 🏡
+                            </p>
+                        </div>
+                        
+                        <!-- Price Display -->
+                        <div class="price-display" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                            <span class="price-amount">Rs. 60,000</span>
+                            <span class="price-note">per individual puppy + Transportation charges</span>
+                        </div>
+                        
+                        <!-- Contact Information -->
+                        <div class="contact-display" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+                            <div class="phone-number">
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                                <span>+91 9363010118</span>
+                            </div>
+                            <a href="https://wa.me/919363010118" 
+                               class="whatsapp-btn" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               aria-label="Contact us via WhatsApp for puppy inquiries">
+                                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                                Contact via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </header>
+                
+                <!-- Puppies Grid -->
+                <div class="puppies-grid" role="list">
+                    <!-- Puppy Card 1: Bella -->
+                    <article class="puppy-card" role="listitem" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
+                             alt="Bella - Premium 8 week old female cream Mini Poodle puppy from AKC Champion bloodlines, KCI certified, available for sale at Elfi's Angels Chennai"
+                             loading="lazy"
+                             width="500"
+                             height="400"
+                             decoding="async">
+                        <div class="card-content">
+                            <h3><span class="gender-prefix"><i class="fas fa-venus" aria-hidden="true"></i> Female</span> Bella</h3>
+                            <p class="details"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 8 weeks • <i class="fas fa-palette" aria-hidden="true"></i> Cream</p>
+                            <div class="lineage">
+                                <p class="sire"><i class="fas fa-mars" aria-hidden="true"></i> Sire: Anakin Skywalker</p>
+                                <p class="dam"><i class="fas fa-venus" aria-hidden="true"></i> Dam: Padmé Amidala</p>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Puppy Card 2: Charlie -->
+                    <article class="puppy-card" role="listitem" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                        <img src="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
+                             alt="Charlie - 10 week old male black Mini Poodle puppy available for sale"
+                             loading="lazy"
+                             width="300"
+                             height="250">
+                        <div class="card-content">
+                            <h3><span class="gender-prefix"><i class="fas fa-mars" aria-hidden="true"></i> Male</span> Charlie</h3>
+                            <p class="details"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 10 weeks • <i class="fas fa-palette" aria-hidden="true"></i> Black</p>
+                            <div class="lineage">
+                                <p class="sire"><i class="fas fa-mars" aria-hidden="true"></i> Sire: Han Solo</p>
+                                <p class="dam"><i class="fas fa-venus" aria-hidden="true"></i> Dam: Princess Leia</p>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Puppy Card 3: Luna -->
+                    <article class="puppy-card" role="listitem" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
+                             alt="Luna - 9 week old female apricot Mini Poodle puppy available for sale"
+                             loading="lazy"
+                             width="300"
+                             height="250">
+                        <div class="card-content">
+                            <h3><span class="gender-prefix"><i class="fas fa-venus" aria-hidden="true"></i> Female</span> Luna</h3>
+                            <p class="details"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 9 weeks • <i class="fas fa-palette" aria-hidden="true"></i> Apricot</p>
+                            <div class="lineage">
+                                <p class="sire"><i class="fas fa-mars" aria-hidden="true"></i> Sire: Luke Skywalker</p>
+                                <p class="dam"><i class="fas fa-venus" aria-hidden="true"></i> Dam: Padmé Amidala</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Puppy Card 4: Max -->
+                    <article class="puppy-card" role="listitem" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
+                             alt="Max - 7 week old male cream Mini Poodle puppy available for sale"
+                             loading="lazy"
+                             width="300"
+                             height="250">
+                        <div class="card-content">
+                            <h3><span class="gender-prefix"><i class="fas fa-mars" aria-hidden="true"></i> Male</span> Max</h3>
+                            <p class="details"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 7 weeks • <i class="fas fa-palette" aria-hidden="true"></i> Cream</p>
+                            <div class="lineage">
+                                <p class="sire"><i class="fas fa-mars" aria-hidden="true"></i> Sire: Obi-Wan Kenobi</p>
+                                <p class="dam"><i class="fas fa-venus" aria-hidden="true"></i> Dam: Princess Leia</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ============================================ -->
+        <!-- ABOUT SECTION -->
+        <!-- ============================================ -->
+        <section id="about" class="about" role="main" data-aos="fade-up" data-aos-duration="1000">
+            <div class="container">
+                <!-- Section Header -->
+                <header class="section-header" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <h2><i class="fas fa-crown" aria-hidden="true"></i> About Us</h2>
+                    <div class="about-description-full">
+                        <p>Champion bloodline meets professional care - bringing you high quality, posh companions for your family</p>
+                    </div>
+                </header>
+                
+                <!-- About Content Grid -->
+                <div class="about-content">
+                    <!-- Main About Text -->
+                    <article class="about-text-full" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                        <h3><i class="fas fa-star" aria-hidden="true"></i> Premium Quality & Care</h3>
+                        <p>At Elfi's Angels, we absolutely love raising premium Mini Poodle puppies! Our high quality puppies come from amazing AKC American Champion bloodlines with parents imported from the USA. We follow all the KCI guidelines to make sure every puppy is super healthy, friendly, and well-behaved. These posh puppies come from fantastic families, making them perfect premium companions for anyone looking for a loving, wonderful furry friend.</p>
+                        
+                        <!-- Features List -->
+                        <div class="features" role="list">
+                            <!-- Feature 1: AKC Bloodlines -->
+                            <div class="feature" role="listitem" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                                <i class="fas fa-award" aria-hidden="true"></i>
+                                <div>
+                                    <h4>AKC American Champion Bloodlines 
+                                        <svg class="flag-icon usa-flag" width="16" height="12" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="USA Flag">
+                                            <rect width="20" height="14" fill="#B22234"/>
+                                            <rect width="20" height="1.08" y="1.08" fill="white"/>
+                                            <rect width="20" height="1.08" y="3.23" fill="white"/>
+                                            <rect width="20" height="1.08" y="5.38" fill="white"/>
+                                            <rect width="20" height="1.08" y="7.54" fill="white"/>
+                                            <rect width="20" height="1.08" y="9.69" fill="white"/>
+                                            <rect width="20" height="1.08" y="11.85" fill="white"/>
+                                            <rect width="8" height="7" fill="#3C3B6E"/>
+                                        </svg>
+                                    </h4>
+                                    <p>Our parent dogs are imported from the USA with AKC certification and champion backgrounds, giving you confident assurance of premium quality, friendly personalities, and beautiful looks in every puppy.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Feature 2: KCI Certified -->
+                            <div class="feature" role="listitem" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                                <i class="fas fa-certificate" aria-hidden="true"></i>
+                                <div>
+                                    <h4>KCI Certified 
+                                        <svg class="flag-icon india-flag" width="16" height="12" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="India Flag">
+                                            <rect width="20" height="4.67" fill="#FF9933"/>
+                                            <rect width="20" height="4.67" y="4.67" fill="white"/>
+                                            <rect width="20" height="4.67" y="9.33" fill="#138808"/>
+                                            <circle cx="10" cy="7" r="1.5" fill="none" stroke="#000080" stroke-width="0.2"/>
+                                        </svg>
+                                    </h4>
+                                    <p>All our puppies come with official KCI certification, so you know you're getting a genuine, high quality puppy with proper documentation.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Feature 3: Home Environment -->
+                            <div class="feature" role="listitem" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                                <i class="fas fa-house-user" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Loving Home Environment</h4>
+                                    <p>Our dogs are raised with lots of love and care in our home, not in backyards or puppy mills. We feed them amazing food from Origen and Farmina brands plus high quality meat, fruits, and very little grains for the best nutrition. All puppies learn to use a potty tray, which makes them perfect for apartment living! They're also great for houses with yards. These pups are super active, playful, and always ready for fun!</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Feature 4: Responsible Care -->
+                            <div class="feature" role="listitem" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                                <i class="fas fa-user-check" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Responsible Care</h4>
+                                    <p>We really care about raising healthy, happy puppies! We do all the health testing to make sure our dogs are in great shape, and every puppy gets checked by KCI judges and experienced vets. This way you know your puppy will look, act, and be just like a perfect Mini Poodle should be!</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Feature 5: Health & Vaccination -->
+                            <div class="feature" role="listitem" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+                                <i class="fas fa-heart-pulse" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Health & Vaccinations</h4>
+                                    <p>All our puppies are fully vaccinated and get complete health checkups with all the medical paperwork you need!</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Feature 6: Shipping -->
+                            <div class="feature" role="listitem" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
+                                <i class="fas fa-shipping-fast" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Shipping Available</h4>
+                                    <p>We can ship anywhere in India. Transportation charges extra. Safe and comfortable delivery arrangements.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Our Kennel Videos Section - Within Premium Quality & Care Column -->
+                        <div class="youtube-videos" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                            <h3><i class="fab fa-youtube" aria-hidden="true"></i> Our Kennel Videos</h3>
+                            <div class="videos-grid">
+                                <!-- Video 1 -->
+                                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer" 
+                                   class="video-thumbnail-link">
+                                    <div class="video-thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                             alt="Puppy Training Video" loading="lazy">
+                                        <div class="play-overlay"><i class="fab fa-youtube"></i></div>
+                                    </div>
+                                    <h4>🐾 Training Sessions</h4>
+                                </a>
+                                <!-- Video 2 -->
+                                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer" 
+                                   class="video-thumbnail-link">
+                                    <div class="video-thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                             alt="Grooming Guide" loading="lazy">
+                                        <div class="play-overlay"><i class="fab fa-youtube"></i></div>
+                                    </div>
+                                    <h4>✨ Grooming Tips</h4>
+                                </a>
+                                <!-- Video 3 -->
+                                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer" 
+                                   class="video-thumbnail-link">
+                                    <div class="video-thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                             alt="Exercise & Play" loading="lazy">
+                                        <div class="play-overlay"><i class="fab fa-youtube"></i></div>
+                                    </div>
+                                    <h4>🎯 Exercise & Play</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Portfolio Sidebar -->
+                    <aside class="about-portfolio" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                        <h3><i class="fas fa-heart" aria-hidden="true"></i> Elfi's Angels</h3>
+                        <div class="portfolio-grid" role="list">
+                            <!-- Portfolio items with lazy loading -->
+                            <div class="portfolio-item" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="400">
+                                <img src="https://images.unsplash.com/photo-1551717743-49959800b1f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+                                     alt="Anakin Skywalker - Black Mini Poodle from our care program"
+                                     loading="lazy"
+                                     width="200"
+                                     height="200">
+                                <div class="portfolio-overlay">
+                                    <h4>Anakin Skywalker</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="portfolio-item" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="500">
+                                <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+                                     alt="Han Solo - Apricot Mini Poodle from our care program"
+                                     loading="lazy"
+                                     width="200"
+                                     height="200">
+                                <div class="portfolio-overlay">
+                                    <h4>Han Solo</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="portfolio-item" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="600">
+                                <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+                                     alt="Princess Leia - Cream Mini Poodle from our care program"
+                                     loading="lazy"
+                                     width="200"
+                                     height="200">
+                                <div class="portfolio-overlay">
+                                    <h4>Princess Leia</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="portfolio-item" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="700">
+                                <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+                                     alt="Padmé Amidala - Apricot Mini Poodle from our care program"
+                                     loading="lazy"
+                                     width="200"
+                                     height="200">
+                                <div class="portfolio-overlay">
+                                    <h4>Padmé Amidala</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="portfolio-item" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="800">
+                                <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+                                     alt="Sabine Wren - Cream Mini Poodle from our care program"
+                                     loading="lazy"
+                                     width="200"
+                                     height="200">
+                                <div class="portfolio-overlay">
+                                    <h4>Sabine Wren</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="portfolio-item" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="900">
+                                <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+                                     alt="Hera Syndulla - Apricot Mini Poodle from our care program"
+                                     loading="lazy"
+                                     width="200"
+                                     height="200">
+                                <div class="portfolio-overlay">
+                                    <h4>Hera Syndulla</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="portfolio-item" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="1000">
+                                <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+                                     alt="Bo-Katan Kryze - Cream Mini Poodle from our care program"
+                                     loading="lazy"
+                                     width="200"
+                                     height="200">
+                                <div class="portfolio-overlay">
+                                    <h4>Bo-Katan Kryze</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="portfolio-item" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="1100">
+                                <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+                                     alt="Gabby The Guardian - Black German Shepherd from our care program"
+                                     loading="lazy"
+                                     width="200"
+                                     height="200">
+                                <div class="portfolio-overlay">
+                                    <h4>Gabby The Guardian</h4>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Championship Achievements Section - Within Elfi's Angels Column -->
+                        <div class="championship-gallery" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900">
+                            <h3><i class="fas fa-trophy" aria-hidden="true"></i> Championship Achievements</h3>
+                            <div class="slideshow-container">
+                                <!-- Championship slides -->
+                                <div class="slide active">
+                                    <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                                         alt="AKC Champion Award Ceremony - Elfi's Angels" 
+                                         loading="lazy">
+                                    <div class="slide-content">
+                                        <h4>🏆 AKC Champion Recognition</h4>
+                                        <p>Award ceremony for exceptional care standards</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="slide">
+                                    <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                                         alt="Best in Show Trophy - Mini Poodle Competition" 
+                                         loading="lazy">
+                                    <div class="slide-content">
+                                        <h4>🥇 Best in Show</h4>
+                                        <p>Excellence recognized at prestigious dog shows</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="slide">
+                                    <img src="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                                         alt="International Poodle Show Winner" 
+                                         loading="lazy">
+                                    <div class="slide-content">
+                                        <h4>🌟 International Recognition</h4>
+                                        <p>Champion bloodline verification from USA</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="slide">
+                                    <img src="https://images.unsplash.com/photo-1551717743-49959800b1f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                                         alt="Health Testing Excellence Certificate" 
+                                         loading="lazy">
+                                    <div class="slide-content">
+                                        <h4>🏥 Health Excellence</h4>
+                                        <p>Perfect health screening results</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Navigation buttons -->
+                                <button class="prev" aria-label="Previous achievement">
+                                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                                </button>
+                                <button class="next" aria-label="Next achievement">
+                                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                                </button>
+                                
+                                <!-- Slide indicators -->
+                                <div class="dots-container">
+                                    <span class="dot active"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+        </section>
+    </main>
+
+    <!-- ============================================ -->
+    <!-- FOOTER SECTION -->
+    <!-- ============================================ -->
+    <footer id="footer" class="footer" role="contentinfo" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Footer Section 1: Company Info -->
+                <section class="footer-section" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="footer-logo">
+                        <img src="src/icons/logo.svg" 
+                             alt="Elfi's Angels Logo - Premium Mini Poodle Breeder" 
+                             class="logo-svg footer-logo-img"
+                             loading="lazy"
+                             width="60"
+                             height="60">
+                    </div>
+                    <p>Excellence in care, raising companions for life. Our KCI certified Mini Poodle puppies are raised with love and care in Chennai.</p>
+                    <address class="footer-contact-info">
+                        <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+919363010118">+91 9363010118</a></p>
+                        <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Chennai, Tamil Nadu</p>
+                    </address>
+                </section>
+                
+                <!-- Footer Section 2: Social Media -->
+                <section class="footer-section" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                    <h4><i class="fas fa-users" aria-hidden="true"></i> Connect With Us</h4>
+                    <p>Follow us for updates, puppy announcements, and adorable photos!</p>
+                    <nav class="footer-social-buttons" aria-label="Social media links">
+                        <a href="https://wa.me/919363010118" 
+                           class="social-btn whatsapp" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           aria-label="Contact us on WhatsApp" 
+                           data-aos="zoom-in" 
+                           data-aos-duration="600" 
+                           data-aos-delay="400">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61573961451589" 
+                           class="social-btn facebook" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           aria-label="Follow us on Facebook" 
+                           data-aos="zoom-in" 
+                           data-aos-duration="600" 
+                           data-aos-delay="500">
+                            <i class="fab fa-facebook" aria-hidden="true"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://www.instagram.com/elfiskennel/" 
+                           class="social-btn instagram" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           aria-label="Follow us on Instagram" 
+                           data-aos="zoom-in" 
+                           data-aos-duration="600" 
+                           data-aos-delay="600">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </nav>
+                </section>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 Elfi's Angels. All rights reserved. | 
+                   <a href="privacy-policy.html" style="color: #ff6b6b; text-decoration: none;">Privacy Policy</a> | 
+                   Analytics by Google Analytics 4</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================ -->
+    <!-- FLOATING ACTION BUTTONS -->
+    <!-- ============================================ -->
+    <div class="floating-buttons" role="complementary" aria-label="Quick action buttons">
+        <!-- WhatsApp Floating Button -->
+        <a href="https://wa.me/919363010118" 
+           class="floating-whatsapp" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           title="Contact via WhatsApp" 
+           aria-label="Contact us via WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            <span class="floating-text">WhatsApp</span>
+        </a>
+        
+        <!-- Puppies Floating Button -->
+        <a href="#puppies" 
+           class="floating-puppies" 
+           id="floatingPuppies" 
+           title="View Available Puppies" 
+           aria-label="View available puppies section">
+            <i class="fas fa-dog" aria-hidden="true"></i>
+            <span class="floating-text">Puppies</span>
+        </a>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- JAVASCRIPT LOADING (OPTIMIZED) -->
+    <!-- ============================================ -->
+    <!-- Load AOS library asynchronously -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" async></script>
+    
+    <!-- Load main JavaScript with defer for better performance -->
+    <script src="src/js/script.js" defer></script>
+    
+    <!-- Mobile-specific JavaScript fix -->
+    <script src="src/js/mobile-fix.js" defer></script>
+    
+    <!-- ============================================ -->
+    <!-- SERVICE WORKER FOR PWA & PERFORMANCE -->
+    <!-- ============================================ -->
+    <script>
+        // Register service worker for offline functionality and caching
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('🎯 ServiceWorker registration successful:', registration.scope);
+                        
+                        // Check for updates
+                        registration.addEventListener('updatefound', () => {
+                            console.log('🔄 New ServiceWorker version available');
+                        });
+                    })
+                    .catch(function(err) {
+                        console.log('❌ ServiceWorker registration failed:', err);
+                    });
+            });
+        }
+        
+        // Performance monitoring
+        window.addEventListener('load', function() {
+            // Measure page load performance
+            const perfData = performance.getEntriesByType('navigation')[0];
+            const loadTime = perfData.loadEventEnd - perfData.fetchStart;
+            
+            console.log(`⚡ Page load time: ${loadTime}ms`);
+            
+            // Track Core Web Vitals
+            if ('PerformanceObserver' in window) {
+                // Largest Contentful Paint
+                new PerformanceObserver((list) => {
+                    const entries = list.getEntries();
+                    const lastEntry = entries[entries.length - 1];
+                    console.log('🎨 LCP (Largest Contentful Paint):', lastEntry.startTime);
+                    
+                    // Track in analytics if needed
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'web_vitals', {
+                            'event_category': 'Performance',
+                            'event_label': 'LCP',
+                            'value': Math.round(lastEntry.startTime)
+                        });
+                    }
+                }).observe({ entryTypes: ['largest-contentful-paint'] });
+                
+                // First Input Delay
+                new PerformanceObserver((list) => {
+                    for (const entry of list.getEntries()) {
+                        console.log('👆 FID (First Input Delay):', entry.processingStart - entry.startTime);
+                        
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'web_vitals', {
+                                'event_category': 'Performance',
+                                'event_label': 'FID',
+                                'value': Math.round(entry.processingStart - entry.startTime)
+                            });
+                        }
+                    }
+                }).observe({ entryTypes: ['first-input'] });
+                
+                // Cumulative Layout Shift
+                let cumulativeLayoutShift = 0;
+                new PerformanceObserver((list) => {
+                    for (const entry of list.getEntries()) {
+                        if (!entry.hadRecentInput) {
+                            cumulativeLayoutShift += entry.value;
+                        }
+                    }
+                    console.log('📐 CLS (Cumulative Layout Shift):', cumulativeLayoutShift);
+                    
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'web_vitals', {
+                            'event_category': 'Performance',
+                            'event_label': 'CLS',
+                            'value': Math.round(cumulativeLayoutShift * 1000)
+                        });
+                    }
+                }).observe({ entryTypes: ['layout-shift'] });
+            }
+            
+            // Image lazy loading optimization
+            if ('loading' in HTMLImageElement.prototype) {
+                console.log('✅ Native lazy loading supported');
+            } else {
+                console.log('🔄 Implementing lazy loading fallback');
+                // Fallback for browsers without native lazy loading
+                const images = document.querySelectorAll('img[loading="lazy"]');
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.dataset.src || img.src;
+                            img.classList.remove('lazy');
+                            observer.unobserve(img);
+                        }
+                    });
+                });
+                
+                images.forEach(img => imageObserver.observe(img));
+            }
+        });
+    </script>
+</body>
+</html>
