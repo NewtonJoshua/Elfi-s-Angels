@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize core functionality modules
     initializeSmoothScrolling();     // Enhanced smooth scroll behavior
-    initializeNavbarEffects();       // Navbar hide/show on scroll
     initializeParallaxEffects();     // Parallax scrolling effects
     initializeStaggerAnimations();   // Staggered animations for grid items
     
@@ -56,35 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ============================================
-// 3. NAVBAR SCROLL EFFECTS - DISABLED FOR FIXED HEADER
-// ============================================
-// REMOVED: Enhanced navbar behavior on scroll (hide/show, styling changes)
-// function initializeNavbarEffects() {
-//     let lastScrollY = window.scrollY;  // Track previous scroll position
-//     
-//     window.addEventListener('scroll', () => {
-//         const currentScrollY = window.scrollY;
-//         
-//         // Add visual styling when scrolled past hero section
-//         if (currentScrollY > 100) {
-//             navbar.classList.add('scrolled');      // Add backdrop blur and darker background
-//         } else {
-//             navbar.classList.remove('scrolled');   // Remove enhanced styling
-//         }
-//         
-//         // Auto-hide navbar when scrolling down (improves mobile experience)
-//         if (currentScrollY > lastScrollY && currentScrollY > 300) {
-//             navbar.style.transform = 'translateY(-100%)';  // Hide navbar
-//         } else {
-//             navbar.style.transform = 'translateY(0)';      // Show navbar
-//         }
-//         
-//         lastScrollY = currentScrollY;  // Update scroll position for next comparison
-//     });
-// }
-
-// ============================================
-// 4. SMOOTH SCROLLING ENHANCEMENT
+// 3. SMOOTH SCROLLING ENHANCEMENT
 // ============================================
 // Enhanced smooth scrolling for internal anchor links
 function initializeSmoothScrolling() {
