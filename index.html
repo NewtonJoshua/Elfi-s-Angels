@@ -43,7 +43,7 @@ SEO optimized for Google search rankings
     <link rel="modulepreload" href="src/js/script.js">
     <meta name="format-detection" content="telephone=no">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-touch-fullscreen" content="yes">>
+    <meta name="apple-touch-fullscreen" content="yes">
     
     <!-- ============================================ -->
     <!-- GOOGLE ANALYTICS 4 (GA4) SETUP -->
@@ -85,8 +85,6 @@ SEO optimized for Google search rankings
             'currency': 'INR',                     // Indian Rupees
             'country': 'IN'                       // India
         });
-        
-        console.log('🔍 Google Analytics 4 initialized for Elfi\'s Angels');
     </script>
     
     <!-- ============================================ -->
@@ -117,7 +115,7 @@ SEO optimized for Google search rankings
     <meta property="og:description" content="Premium hypoallergenic Mini Poodle puppies for sale in Chennai! Perfect small dogs for apartments. AKC American Champion bloodlines, KCI certified, fully vaccinated, potty trained. Non-shedding premium dogs ideal for families with allergies.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://elfisangels.com">
-    <meta property="og:image" content="https://elfisangels.com/hero-poodles.jpg">
+    <meta property="og:image" content="https://elfisangels.com/src/images/hero-poodles.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="Elfi's Angels">
@@ -129,7 +127,7 @@ SEO optimized for Google search rankings
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Premium Hypoallergenic Poodle Puppies Chennai | Small Dogs | Premium Dogs">
     <meta name="twitter:description" content="AKC Champion bloodlines, hypoallergenic Mini Poodle puppies for sale in Chennai. Perfect small dogs for apartments. Non-shedding premium dogs, KCI certified.">
-    <meta name="twitter:image" content="https://elfisangels.com/hero-poodles.jpg">
+    <meta name="twitter:image" content="https://elfisangels.com/src/images/hero-poodles.jpg">
     
     <!-- ============================================ -->
     <!-- CANONICAL URL & HREFLANG -->
@@ -140,12 +138,9 @@ SEO optimized for Google search rankings
     
     <!-- ============================================ -->
     <!-- FAVICON & APPLE TOUCH ICONS -->
-    <!-- Fixed logo path to use new src/ structure -->
     <!-- ============================================ -->
     <link rel="icon" type="image/svg+xml" href="src/icons/logo.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="src/icons/logo.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     
     <!-- ============================================ -->
     <!-- PWA MANIFEST & THEME -->
@@ -170,7 +165,7 @@ SEO optimized for Google search rankings
         "telephone": "+919363010118",
         "priceRange": "₹60,000",
         "openingHours": "Mo-Su 09:00-20:00",
-        "image": "https://elfisangels.com/logo.svg",
+        "image": "https://elfisangels.com/src/icons/logo.svg",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Chennai",
@@ -238,7 +233,7 @@ SEO optimized for Google search rankings
                 "url": "https://elfisangels.com",
                 "logo": {
                     "@type": "ImageObject",
-                    "url": "https://elfisangels.com/logo.svg"
+                    "url": "https://elfisangels.com/src/icons/logo.svg"
                 }
             },
             {
@@ -393,15 +388,15 @@ SEO optimized for Google search rankings
     <style>
         /* Critical above-the-fold CSS for instant loading */
         *{margin:0;padding:0;box-sizing:border-box}
-        html{scroll-behavior:smooth;scroll-padding-top:80px}
+        html{scroll-behavior:smooth;scroll-padding-top:100px}
         body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.7;color:#e0e0e0;background:#0a0a0a;overflow-x:hidden}
         .navbar{position:fixed !important;top:0 !important;left:0 !important;right:0 !important;width:100% !important;background:rgba(0,0,0,.95) !important;backdrop-filter:blur(20px);z-index:1000 !important;height:80px !important;display:flex !important;align-items:center;border-bottom:1px solid rgba(255,255,255,.1);transform:none !important}
         .nav-container{max-width:1400px;margin:0 auto;padding:0 30px;display:flex;justify-content:space-between;align-items:center}
         .logo-svg{height:80px;width:auto}
-        .hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(135deg,rgba(10,10,10,.9),rgba(0,0,0,.8));padding:80px 0 4rem}
+        .hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(135deg,rgba(10,10,10,.9),rgba(0,0,0,.8));padding:140px 0 4rem}
         .hero-content{flex:1;max-width:700px;margin-right:80px;z-index:2}
         .hero-content h1{font-size:4.5rem;font-weight:100;color:#fff;margin-bottom:2rem;line-height:1.4;letter-spacing:3px;animation:none!important;border-right:none!important}
-        @media(max-width:768px){.hero{flex-direction:column;text-align:center;padding:120px 20px 2rem}.hero-content{margin-right:0;margin-bottom:4rem;max-width:100%}.hero-content h1{font-size:3.2rem;letter-spacing:1px}.logo-svg{height:60px}}
+        @media(max-width:768px){.hero{flex-direction:column;text-align:center;padding:140px 20px 2rem}.hero-content{margin-right:0;margin-bottom:4rem;max-width:100%}.hero-content h1{font-size:3.2rem;letter-spacing:1px}.logo-svg{height:60px}}
     </style>
     
     <!-- ============================================ -->
@@ -572,8 +567,8 @@ SEO optimized for Google search rankings
                 
                 <!-- Hero Image with Lazy Loading -->
                 <div class="hero-image" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="300">
-                    <img src="src/images/hero-poodles.jpg" 
-                         alt="Beautiful cream Mini Poodle puppy from Elfi's Angels premium care program" 
+                    <img src="src/images/dogs/cover/WhatsApp%20Image%202026-04-14%20at%205.36.57%20PM.jpeg" 
+                         alt="Premium Poodle Puppies from Elfi's Angels in the intro section" 
                          width="600" 
                          height="400"
                          loading="eager"
@@ -649,34 +644,17 @@ SEO optimized for Google search rankings
                 
                 <!-- Puppies Grid -->
                 <div class="puppies-grid" role="list">
-                    <!-- Puppy Card 1: Bella -->
+                    <!-- Puppy Card 1: Male 1 -->
                     <article class="puppy-card" role="listitem" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
-                             alt="Bella - Premium 8 week old female cream Mini Poodle puppy from AKC Champion bloodlines, KCI certified, available for sale at Elfi's Angels Chennai"
+                        <img src="src/images/puppies/WhatsApp%20Image%202026-04-14%20at%204.18.40%20PM%20%281%29.jpeg" 
+                             alt="Male 1 - 4 week old red Mini Poodle puppy available for sale"
                              loading="lazy"
                              width="500"
                              height="400"
                              decoding="async">
                         <div class="card-content">
-                            <h3><span class="gender-prefix"><i class="fas fa-venus" aria-hidden="true"></i> Female</span> Bella</h3>
-                            <p class="details"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 8 weeks • <i class="fas fa-palette" aria-hidden="true"></i> Cream</p>
-                            <div class="lineage">
-                                <p class="sire"><i class="fas fa-mars" aria-hidden="true"></i> Sire: Anakin Skywalker</p>
-                                <p class="dam"><i class="fas fa-venus" aria-hidden="true"></i> Dam: Padmé Amidala</p>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <!-- Puppy Card 2: Charlie -->
-                    <article class="puppy-card" role="listitem" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                        <img src="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
-                             alt="Charlie - 10 week old male black Mini Poodle puppy available for sale"
-                             loading="lazy"
-                             width="300"
-                             height="250">
-                        <div class="card-content">
-                            <h3><span class="gender-prefix"><i class="fas fa-mars" aria-hidden="true"></i> Male</span> Charlie</h3>
-                            <p class="details"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 10 weeks • <i class="fas fa-palette" aria-hidden="true"></i> Black</p>
+                            <h3><span class="gender-prefix"><i class="fas fa-mars" aria-hidden="true"></i> Male</span> Male 1</h3>
+                            <p class="details"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 4 weeks • <i class="fas fa-palette" aria-hidden="true"></i> Red</p>
                             <div class="lineage">
                                 <p class="sire"><i class="fas fa-mars" aria-hidden="true"></i> Sire: Han Solo</p>
                                 <p class="dam"><i class="fas fa-venus" aria-hidden="true"></i> Dam: Princess Leia</p>
@@ -684,35 +662,52 @@ SEO optimized for Google search rankings
                         </div>
                     </article>
                     
-                    <!-- Puppy Card 3: Luna -->
-                    <article class="puppy-card" role="listitem" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-                        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
-                             alt="Luna - 9 week old female apricot Mini Poodle puppy available for sale"
+                    <!-- Puppy Card 2: Male 2 -->
+                    <article class="puppy-card" role="listitem" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                        <img src="src/images/puppies/WhatsApp%20Image%202026-04-14%20at%204.18.40%20PM%20%283%29.jpeg" 
+                             alt="Male 2 - 4 week old apricot Mini Poodle puppy available for sale"
                              loading="lazy"
                              width="300"
                              height="250">
                         <div class="card-content">
-                            <h3><span class="gender-prefix"><i class="fas fa-venus" aria-hidden="true"></i> Female</span> Luna</h3>
-                            <p class="details"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 9 weeks • <i class="fas fa-palette" aria-hidden="true"></i> Apricot</p>
+                            <h3><span class="gender-prefix"><i class="fas fa-mars" aria-hidden="true"></i> Male</span> Male 2</h3>
+                            <p class="details"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 4 weeks • <i class="fas fa-palette" aria-hidden="true"></i> Apricot</p>
                             <div class="lineage">
-                                <p class="sire"><i class="fas fa-mars" aria-hidden="true"></i> Sire: Luke Skywalker</p>
-                                <p class="dam"><i class="fas fa-venus" aria-hidden="true"></i> Dam: Padmé Amidala</p>
+                                <p class="sire"><i class="fas fa-mars" aria-hidden="true"></i> Sire: Han Solo</p>
+                                <p class="dam"><i class="fas fa-venus" aria-hidden="true"></i> Dam: Princess Leia</p>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Puppy Card 3: Male 3 -->
+                    <article class="puppy-card" role="listitem" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                        <img src="src/images/puppies/WhatsApp%20Image%202026-04-14%20at%204.18.41%20PM.jpeg" 
+                             alt="Male 3 - 4 week old apricot Mini Poodle puppy available for sale"
+                             loading="lazy"
+                             width="300"
+                             height="250">
+                        <div class="card-content">
+                            <h3><span class="gender-prefix"><i class="fas fa-mars" aria-hidden="true"></i> Male</span> Male 3</h3>
+                            <p class="details"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 4 weeks • <i class="fas fa-palette" aria-hidden="true"></i> Apricot</p>
+                            <div class="lineage">
+                                <p class="sire"><i class="fas fa-mars" aria-hidden="true"></i> Sire: Han Solo</p>
+                                <p class="dam"><i class="fas fa-venus" aria-hidden="true"></i> Dam: Princess Leia</p>
                             </div>
                         </div>
                     </article>
 
-                    <!-- Puppy Card 4: Max -->
+                    <!-- Puppy Card 4: Male 4 -->
                     <article class="puppy-card" role="listitem" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
-                        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
-                             alt="Max - 7 week old male cream Mini Poodle puppy available for sale"
+                        <img src="src/images/puppies/WhatsApp%20Image%202026-04-14%20at%204.18.41%20PM%20%282%29.jpeg" 
+                             alt="Male 4 - 4 week old red Mini Poodle puppy available for sale"
                              loading="lazy"
                              width="300"
                              height="250">
                         <div class="card-content">
-                            <h3><span class="gender-prefix"><i class="fas fa-mars" aria-hidden="true"></i> Male</span> Max</h3>
-                            <p class="details"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 7 weeks • <i class="fas fa-palette" aria-hidden="true"></i> Cream</p>
+                            <h3><span class="gender-prefix"><i class="fas fa-mars" aria-hidden="true"></i> Male</span> Male 4</h3>
+                            <p class="details"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 4 weeks • <i class="fas fa-palette" aria-hidden="true"></i> Red</p>
                             <div class="lineage">
-                                <p class="sire"><i class="fas fa-mars" aria-hidden="true"></i> Sire: Obi-Wan Kenobi</p>
+                                <p class="sire"><i class="fas fa-mars" aria-hidden="true"></i> Sire: Han Solo</p>
                                 <p class="dam"><i class="fas fa-venus" aria-hidden="true"></i> Dam: Princess Leia</p>
                             </div>
                         </div>
@@ -821,41 +816,29 @@ SEO optimized for Google search rankings
                             <h3><i class="fab fa-youtube" aria-hidden="true"></i> Our Kennel Videos</h3>
                             <div class="videos-grid">
                                 <!-- Video 1 -->
-                                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
-                                   target="_blank" 
-                                   rel="noopener noreferrer" 
-                                   class="video-thumbnail-link">
+                                <div class="video-thumbnail-link" aria-label="New Puppy Announcement video">
                                     <div class="video-thumbnail">
-                                        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-                                             alt="Puppy Training Video" loading="lazy">
-                                        <div class="play-overlay"><i class="fab fa-youtube"></i></div>
+                                        <video controls preload="metadata" playsinline>
+                                            <source src="src/images/videos/WhatsApp%20Video%202026-04-10%20at%205.08.15%20PM.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
                                     </div>
-                                    <h4>🐾 Training Sessions</h4>
-                                </a>
+                                    <h4>🎉 New Puppy Announcement</h4>
+                                </div>
                                 <!-- Video 2 -->
-                                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
-                                   target="_blank" 
-                                   rel="noopener noreferrer" 
-                                   class="video-thumbnail-link">
+                                <div class="video-thumbnail-link video-thumbnail-link--placeholder" aria-label="Reserved video slot">
                                     <div class="video-thumbnail">
-                                        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-                                             alt="Grooming Guide" loading="lazy">
-                                        <div class="play-overlay"><i class="fab fa-youtube"></i></div>
+                                        <div class="video-placeholder-empty" aria-hidden="true"></div>
                                     </div>
-                                    <h4>✨ Grooming Tips</h4>
-                                </a>
+                                    <h4 aria-hidden="true">&nbsp;</h4>
+                                </div>
                                 <!-- Video 3 -->
-                                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
-                                   target="_blank" 
-                                   rel="noopener noreferrer" 
-                                   class="video-thumbnail-link">
+                                <div class="video-thumbnail-link video-thumbnail-link--placeholder" aria-label="Reserved video slot">
                                     <div class="video-thumbnail">
-                                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-                                             alt="Exercise & Play" loading="lazy">
-                                        <div class="play-overlay"><i class="fab fa-youtube"></i></div>
+                                        <div class="video-placeholder-empty" aria-hidden="true"></div>
                                     </div>
-                                    <h4>🎯 Exercise & Play</h4>
-                                </a>
+                                    <h4 aria-hidden="true">&nbsp;</h4>
+                                </div>
                             </div>
                         </div>
                     </article>
@@ -864,159 +847,292 @@ SEO optimized for Google search rankings
                     <aside class="about-portfolio" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
                         <h3><i class="fas fa-heart" aria-hidden="true"></i> Elfi's Angels</h3>
                         <div class="portfolio-grid" role="list">
-                            <!-- Portfolio items with lazy loading -->
-                            <div class="portfolio-item" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="400">
-                                <img src="https://images.unsplash.com/photo-1551717743-49959800b1f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                                     alt="Anakin Skywalker - Black Mini Poodle from our care program"
-                                     loading="lazy"
-                                     width="200"
-                                     height="200">
-                                <div class="portfolio-overlay">
-                                    <h4>Anakin Skywalker</h4>
-                                </div>
-                            </div>
-                            
-                            <div class="portfolio-item" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="500">
-                                <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                                     alt="Han Solo - Apricot Mini Poodle from our care program"
-                                     loading="lazy"
-                                     width="200"
-                                     height="200">
-                                <div class="portfolio-overlay">
-                                    <h4>Han Solo</h4>
-                                </div>
-                            </div>
-                            
-                            <div class="portfolio-item" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="600">
-                                <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                                     alt="Princess Leia - Cream Mini Poodle from our care program"
-                                     loading="lazy"
-                                     width="200"
-                                     height="200">
-                                <div class="portfolio-overlay">
-                                    <h4>Princess Leia</h4>
-                                </div>
-                            </div>
-                            
-                            <div class="portfolio-item" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="700">
-                                <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                                     alt="Padmé Amidala - Apricot Mini Poodle from our care program"
-                                     loading="lazy"
-                                     width="200"
-                                     height="200">
-                                <div class="portfolio-overlay">
-                                    <h4>Padmé Amidala</h4>
-                                </div>
-                            </div>
-                            
-                            <div class="portfolio-item" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="800">
-                                <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                                     alt="Sabine Wren - Cream Mini Poodle from our care program"
-                                     loading="lazy"
-                                     width="200"
-                                     height="200">
-                                <div class="portfolio-overlay">
-                                    <h4>Sabine Wren</h4>
-                                </div>
-                            </div>
-                            
-                            <div class="portfolio-item" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="900">
-                                <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                                     alt="Hera Syndulla - Apricot Mini Poodle from our care program"
-                                     loading="lazy"
-                                     width="200"
-                                     height="200">
-                                <div class="portfolio-overlay">
-                                    <h4>Hera Syndulla</h4>
-                                </div>
-                            </div>
-                            
-                            <div class="portfolio-item" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="1000">
-                                <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                                     alt="Bo-Katan Kryze - Cream Mini Poodle from our care program"
-                                     loading="lazy"
-                                     width="200"
-                                     height="200">
-                                <div class="portfolio-overlay">
-                                    <h4>Bo-Katan Kryze</h4>
-                                </div>
-                            </div>
-                            
-                            <div class="portfolio-item" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="1100">
-                                <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                                     alt="Gabby The Guardian - Black German Shepherd from our care program"
-                                     loading="lazy"
-                                     width="200"
-                                     height="200">
-                                <div class="portfolio-overlay">
-                                    <h4>Gabby The Guardian</h4>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Championship Achievements Section - Within Elfi's Angels Column -->
-                        <div class="championship-gallery" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900">
-                            <h3><i class="fas fa-trophy" aria-hidden="true"></i> Championship Achievements</h3>
-                            <div class="slideshow-container">
-                                <!-- Championship slides -->
-                                <div class="slide active">
-                                    <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
-                                         alt="AKC Champion Award Ceremony - Elfi's Angels" 
-                                         loading="lazy">
-                                    <div class="slide-content">
-                                        <h4>🏆 AKC Champion Recognition</h4>
-                                        <p>Award ceremony for exceptional care standards</p>
+                            <!-- Anakin Skywalker -->
+                            <div class="portfolio-item dog-portfolio-card" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="400">
+                                <div class="dog-photo-frame">
+                                    <div class="dog-slider" data-dog-slider tabindex="0" aria-label="Photos of Anakin Skywalker">
+                                        <div class="dog-slider__slides">
+                                            <div class="dog-slider__slide is-active">
+                                                <img src="src/images/dogs/anakkin/MATZ0842.jpg" alt="Anakin Skywalker, black Mini Poodle" loading="lazy" width="400" height="300">
+                                            </div>
+                                            <div class="dog-slider__slide">
+                                                <img src="src/images/dogs/anakkin/MATZ0852.jpg" alt="Anakin Skywalker, black Mini Poodle" loading="lazy" width="400" height="300">
+                                            </div>
+                                            <div class="dog-slider__slide">
+                                                <img src="src/images/dogs/anakkin/MATZ0862.jpg" alt="Anakin Skywalker, black Mini Poodle" loading="lazy" width="400" height="300">
+                                            </div>
+                                        </div>
+                                        <button type="button" class="dog-slider__nav dog-slider__nav--prev" aria-label="Previous photo of Anakin Skywalker"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                                        <button type="button" class="dog-slider__nav dog-slider__nav--next" aria-label="Next photo of Anakin Skywalker"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                                        <div class="dog-slider__dots" role="group" aria-label="Photo indicators">
+                                            <button type="button" class="dog-slider__dot is-active" aria-label="Photo 1 of 3" aria-current="true"></button>
+                                            <button type="button" class="dog-slider__dot" aria-label="Photo 2 of 3"></button>
+                                            <button type="button" class="dog-slider__dot" aria-label="Photo 3 of 3"></button>
+                                        </div>
                                     </div>
+                                    <div class="portfolio-overlay"><h4>Anakin Skywalker 🇺🇸</h4></div>
                                 </div>
-                                
-                                <div class="slide">
-                                    <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
-                                         alt="Best in Show Trophy - Mini Poodle Competition" 
-                                         loading="lazy">
-                                    <div class="slide-content">
-                                        <h4>🥇 Best in Show</h4>
-                                        <p>Excellence recognized at prestigious dog shows</p>
+                            </div>
+                            <!-- Solo and Leia -->
+                            <div class="portfolio-item dog-portfolio-card" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="450">
+                                <div class="dog-photo-frame">
+                                    <div class="dog-slider" data-dog-slider tabindex="0" aria-label="Photos of Solo and Leia">
+                                        <div class="dog-slider__slides">
+                                            <div class="dog-slider__slide is-active">
+                                                <img src="src/images/dogs/solo%20and%20leia/MATZ1142.jpg" alt="Solo and Leia together, Mini Poodles" loading="lazy" width="400" height="300">
+                                            </div>
+                                            <div class="dog-slider__slide">
+                                                <img src="src/images/dogs/solo%20and%20leia/MATZ1146.jpg" alt="Solo and Leia together, Mini Poodles" loading="lazy" width="400" height="300">
+                                            </div>
+                                            <div class="dog-slider__slide">
+                                                <img src="src/images/dogs/solo%20and%20leia/MATZ1190.jpg" alt="Solo and Leia together, Mini Poodles" loading="lazy" width="400" height="300">
+                                            </div>
+                                        </div>
+                                        <button type="button" class="dog-slider__nav dog-slider__nav--prev" aria-label="Previous photo of Solo and Leia"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                                        <button type="button" class="dog-slider__nav dog-slider__nav--next" aria-label="Next photo of Solo and Leia"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                                        <div class="dog-slider__dots" role="group" aria-label="Photo indicators">
+                                            <button type="button" class="dog-slider__dot is-active" aria-label="Photo 1 of 3" aria-current="true"></button>
+                                            <button type="button" class="dog-slider__dot" aria-label="Photo 2 of 3"></button>
+                                            <button type="button" class="dog-slider__dot" aria-label="Photo 3 of 3"></button>
+                                        </div>
                                     </div>
+                                    <div class="portfolio-overlay"><h4>Solo and Leia</h4></div>
                                 </div>
-                                
-                                <div class="slide">
-                                    <img src="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
-                                         alt="International Poodle Show Winner" 
-                                         loading="lazy">
-                                    <div class="slide-content">
-                                        <h4>🌟 International Recognition</h4>
-                                        <p>Champion bloodline verification from USA</p>
+                            </div>
+                            <!-- Han Solo -->
+                            <div class="portfolio-item dog-portfolio-card" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="500">
+                                <div class="dog-photo-frame">
+                                    <div class="dog-slider" data-dog-slider tabindex="0" aria-label="Photos of Han Solo">
+                                        <div class="dog-slider__slides">
+                                            <div class="dog-slider__slide is-active">
+                                                <img src="src/images/dogs/solo/MATZ1094.jpg" alt="Han Solo, Mini Poodle" loading="lazy" width="400" height="300">
+                                            </div>
+                                            <div class="dog-slider__slide">
+                                                <img src="src/images/dogs/solo/MATZ1119.jpg" alt="Han Solo, Mini Poodle" loading="lazy" width="400" height="300">
+                                            </div>
+                                            <div class="dog-slider__slide">
+                                                <img src="src/images/dogs/solo/MATZ1139.jpg" alt="Han Solo, Mini Poodle" loading="lazy" width="400" height="300">
+                                            </div>
+                                        </div>
+                                        <button type="button" class="dog-slider__nav dog-slider__nav--prev" aria-label="Previous photo of Han Solo"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                                        <button type="button" class="dog-slider__nav dog-slider__nav--next" aria-label="Next photo of Han Solo"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                                        <div class="dog-slider__dots" role="group" aria-label="Photo indicators">
+                                            <button type="button" class="dog-slider__dot is-active" aria-label="Photo 1 of 3" aria-current="true"></button>
+                                            <button type="button" class="dog-slider__dot" aria-label="Photo 2 of 3"></button>
+                                            <button type="button" class="dog-slider__dot" aria-label="Photo 3 of 3"></button>
+                                        </div>
                                     </div>
+                                    <div class="portfolio-overlay"><h4>Han Solo</h4></div>
                                 </div>
-                                
-                                <div class="slide">
-                                    <img src="https://images.unsplash.com/photo-1551717743-49959800b1f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
-                                         alt="Health Testing Excellence Certificate" 
-                                         loading="lazy">
-                                    <div class="slide-content">
-                                        <h4>🏥 Health Excellence</h4>
-                                        <p>Perfect health screening results</p>
+                            </div>
+                            <!-- Princess Leia -->
+                            <div class="portfolio-item dog-portfolio-card" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="600">
+                                <div class="dog-photo-frame">
+                                    <div class="dog-slider" data-dog-slider tabindex="0" aria-label="Photos of Princess Leia">
+                                        <div class="dog-slider__slides">
+                                            <div class="dog-slider__slide is-active">
+                                                <img src="src/images/dogs/leia/MATZ0949.jpg" alt="Princess Leia, cream Mini Poodle" loading="lazy" width="400" height="300">
+                                            </div>
+                                            <div class="dog-slider__slide">
+                                                <img src="src/images/dogs/leia/MATZ0986.jpg" alt="Princess Leia, cream Mini Poodle" loading="lazy" width="400" height="300">
+                                            </div>
+                                            <div class="dog-slider__slide">
+                                                <img src="src/images/dogs/leia/MATZ1263.jpg" alt="Princess Leia, cream Mini Poodle" loading="lazy" width="400" height="300">
+                                            </div>
+                                        </div>
+                                        <button type="button" class="dog-slider__nav dog-slider__nav--prev" aria-label="Previous photo of Princess Leia"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                                        <button type="button" class="dog-slider__nav dog-slider__nav--next" aria-label="Next photo of Princess Leia"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                                        <div class="dog-slider__dots" role="group" aria-label="Photo indicators">
+                                            <button type="button" class="dog-slider__dot is-active" aria-label="Photo 1 of 3" aria-current="true"></button>
+                                            <button type="button" class="dog-slider__dot" aria-label="Photo 2 of 3"></button>
+                                            <button type="button" class="dog-slider__dot" aria-label="Photo 3 of 3"></button>
+                                        </div>
                                     </div>
+                                    <div class="portfolio-overlay"><h4>Princess Leia</h4></div>
                                 </div>
-                                
-                                <!-- Navigation buttons -->
-                                <button class="prev" aria-label="Previous achievement">
-                                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
-                                </button>
-                                <button class="next" aria-label="Next achievement">
-                                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
-                                </button>
-                                
-                                <!-- Slide indicators -->
-                                <div class="dots-container">
-                                    <span class="dot active"></span>
-                                    <span class="dot"></span>
-                                    <span class="dot"></span>
-                                    <span class="dot"></span>
+                            </div>
+                            <!-- Sabine Wren -->
+                            <div class="portfolio-item dog-portfolio-card" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="800">
+                                <div class="dog-photo-frame">
+                                    <div class="dog-slider" data-dog-slider tabindex="0" aria-label="Photos of Sabine Wren">
+                                        <div class="dog-slider__slides">
+                                            <div class="dog-slider__slide is-active">
+                                                <img src="src/images/dogs/sabine/MATZ1386.jpg" alt="Sabine Wren, Mini Poodle" loading="lazy" width="400" height="300">
+                                            </div>
+                                            <div class="dog-slider__slide">
+                                                <img src="src/images/dogs/sabine/MATZ1444.jpg" alt="Sabine Wren, Mini Poodle" loading="lazy" width="400" height="300">
+                                            </div>
+                                            <div class="dog-slider__slide">
+                                                <img src="src/images/dogs/sabine/MATZ1447.jpg" alt="Sabine Wren, Mini Poodle" loading="lazy" width="400" height="300">
+                                            </div>
+                                        </div>
+                                        <button type="button" class="dog-slider__nav dog-slider__nav--prev" aria-label="Previous photo of Sabine Wren"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                                        <button type="button" class="dog-slider__nav dog-slider__nav--next" aria-label="Next photo of Sabine Wren"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                                        <div class="dog-slider__dots" role="group" aria-label="Photo indicators">
+                                            <button type="button" class="dog-slider__dot is-active" aria-label="Photo 1 of 3" aria-current="true"></button>
+                                            <button type="button" class="dog-slider__dot" aria-label="Photo 2 of 3"></button>
+                                            <button type="button" class="dog-slider__dot" aria-label="Photo 3 of 3"></button>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-overlay"><h4>Sabine Wren</h4></div>
+                                </div>
+                            </div>
+                            <!-- Hera Syndulla -->
+                            <div class="portfolio-item dog-portfolio-card" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="900">
+                                <div class="dog-photo-frame">
+                                    <div class="dog-slider dog-slider--single" data-dog-slider tabindex="0" aria-label="Photo of Hera Syndulla">
+                                        <div class="dog-slider__slides">
+                                            <div class="dog-slider__slide is-active">
+                                                <img src="src/images/dogs/hera/image.png" alt="Hera Syndulla, Mini Poodle" loading="lazy" width="400" height="300">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-overlay"><h4>Hera Syndulla</h4></div>
+                                </div>
+                            </div>
+                            <!-- Bo-Katan Kryze -->
+                            <div class="portfolio-item dog-portfolio-card" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="1000">
+                                <div class="dog-photo-frame">
+                                    <div class="dog-slider dog-slider--single" data-dog-slider tabindex="0" aria-label="Photo of Bo-Katan Kryze">
+                                        <div class="dog-slider__slides">
+                                            <div class="dog-slider__slide is-active">
+                                                <img src="src/images/dogs/bokatan/image.png" alt="Bo-Katan Kryze, Mini Poodle" loading="lazy" width="400" height="300">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-overlay"><h4>Bo-Katan Kryze</h4></div>
+                                </div>
+                            </div>
+                            <!-- Padmé Amidala -->
+                            <div class="portfolio-item dog-portfolio-card" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="1050">
+                                <div class="dog-photo-frame">
+                                    <div class="dog-slider" data-dog-slider tabindex="0" aria-label="Photos of Padmé Amidala">
+                                        <div class="dog-slider__slides">
+                                            <div class="dog-slider__slide is-active">
+                                                <img src="src/images/dogs/padme/MATZ1069.jpg" alt="Padmé Amidala, Mini Poodle" loading="lazy" width="400" height="300">
+                                            </div>
+                                            <div class="dog-slider__slide">
+                                                <img src="src/images/dogs/padme/MATZ1300.jpg" alt="Padmé Amidala, Mini Poodle" loading="lazy" width="400" height="300">
+                                            </div>
+                                            <div class="dog-slider__slide">
+                                                <img src="src/images/dogs/padme/MATZ1332.jpg" alt="Padmé Amidala, Mini Poodle" loading="lazy" width="400" height="300">
+                                            </div>
+                                        </div>
+                                        <button type="button" class="dog-slider__nav dog-slider__nav--prev" aria-label="Previous photo of Padmé Amidala"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                                        <button type="button" class="dog-slider__nav dog-slider__nav--next" aria-label="Next photo of Padmé Amidala"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                                        <div class="dog-slider__dots" role="group" aria-label="Photo indicators">
+                                            <button type="button" class="dog-slider__dot is-active" aria-label="Photo 1 of 3" aria-current="true"></button>
+                                            <button type="button" class="dog-slider__dot" aria-label="Photo 2 of 3"></button>
+                                            <button type="button" class="dog-slider__dot" aria-label="Photo 3 of 3"></button>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-overlay"><h4>Padmé Amidala (Toy Poodle)</h4></div>
+                                </div>
+                            </div>
+                            <!-- Gabby The Guardian -->
+                            <div class="portfolio-item dog-portfolio-card" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="1100">
+                                <div class="dog-photo-frame">
+                                    <div class="dog-slider" data-dog-slider tabindex="0" aria-label="Photos of Gabby The Guardian">
+                                        <div class="dog-slider__slides">
+                                            <div class="dog-slider__slide is-active">
+                                                <img src="src/images/dogs/gaby/WhatsApp%20Image%202026-04-14%20at%205.00.50%20PM.jpeg" alt="Gabby The Guardian" loading="lazy" width="400" height="300">
+                                            </div>
+                                            <div class="dog-slider__slide">
+                                                <img src="src/images/dogs/gaby/WhatsApp%20Image%202026-04-14%20at%205.01.45%20PM.jpeg" alt="Gabby The Guardian" loading="lazy" width="400" height="300">
+                                            </div>
+                                        </div>
+                                        <button type="button" class="dog-slider__nav dog-slider__nav--prev" aria-label="Previous photo of Gabby The Guardian"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                                        <button type="button" class="dog-slider__nav dog-slider__nav--next" aria-label="Next photo of Gabby The Guardian"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                                        <div class="dog-slider__dots" role="group" aria-label="Photo indicators">
+                                            <button type="button" class="dog-slider__dot is-active" aria-label="Photo 1 of 2" aria-current="true"></button>
+                                            <button type="button" class="dog-slider__dot" aria-label="Photo 2 of 2"></button>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-overlay"><h4>Gabby The Guardian (Black GSD)</h4></div>
+                                </div>
+                            </div>
+                            <!-- Jack Sparrow -->
+                            <div class="portfolio-item dog-portfolio-card" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="1200">
+                                <div class="dog-photo-frame">
+                                    <div class="dog-slider" data-dog-slider tabindex="0" aria-label="Photos of Jack Sparrow">
+                                        <div class="dog-slider__slides">
+                                            <div class="dog-slider__slide is-active">
+                                                <img src="src/images/dogs/Jack%20sparrow/WhatsApp%20Image%202026-04-14%20at%205.17.04%20PM%281%29.jpeg" alt="Jack Sparrow, Mini Poodle" loading="lazy" width="400" height="300">
+                                            </div>
+                                            <div class="dog-slider__slide">
+                                                <img src="src/images/dogs/Jack%20sparrow/WhatsApp%20Image%202026-04-14%20at%205.17.27%20PM%281%29.jpeg" alt="Jack Sparrow, Mini Poodle" loading="lazy" width="400" height="300">
+                                            </div>
+                                        </div>
+                                        <button type="button" class="dog-slider__nav dog-slider__nav--prev" aria-label="Previous photo of Jack Sparrow"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                                        <button type="button" class="dog-slider__nav dog-slider__nav--next" aria-label="Next photo of Jack Sparrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                                        <div class="dog-slider__dots" role="group" aria-label="Photo indicators">
+                                            <button type="button" class="dog-slider__dot is-active" aria-label="Photo 1 of 2" aria-current="true"></button>
+                                            <button type="button" class="dog-slider__dot" aria-label="Photo 2 of 2"></button>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-overlay"><h4>Jack Sparrow 🇺🇸 (Standard Poodle)</h4></div>
                                 </div>
                             </div>
                         </div>
                     </aside>
+                </div>
+
+                <!-- Champion Lineage - Full row below videos and sidebar -->
+                <div class="championship-lineage championship-lineage--full-row" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                    <h3><i class="fas fa-trophy" aria-hidden="true"></i> Champion Lineage</h3>
+                    <p>Verified champion bloodlines from AKC 🇺🇸 and KCI 🇮🇳 records.</p>
+                    <div class="championship-lineage-grid">
+                        <section class="championship-lineage-card" aria-label="Anakin lineage section">
+                            <h4>🏆 Anakin Skywalker's Father - AKC Champion</h4>
+                            <div class="dog-slider championship-lineage-slider" data-dog-slider tabindex="0" aria-label="Championship photos for Anakin's father">
+                                <div class="dog-slider__slides">
+                                    <div class="dog-slider__slide is-active">
+                                        <img src="src/images/championship/anakin/11kbyebv24f71gtnnwkg05o7t5xu.jpeg" alt="AKC championship photo of Anakin Skywalker's father" loading="lazy">
+                                    </div>
+                                    <div class="dog-slider__slide">
+                                        <img src="src/images/championship/anakin/85pint4v7t9z1m9vsbygy8o1sjpd.jpeg" alt="AKC ring photo of Anakin Skywalker's father" loading="lazy">
+                                    </div>
+                                    <div class="dog-slider__slide">
+                                        <img src="src/images/championship/anakin/ags629l4a5f0fuxuqp82l6yzm4ax.jpeg" alt="AKC winning lineup photo of Anakin Skywalker's father" loading="lazy">
+                                    </div>
+                                </div>
+                                <button type="button" class="dog-slider__nav dog-slider__nav--prev" aria-label="Previous Anakin lineage photo"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                                <button type="button" class="dog-slider__nav dog-slider__nav--next" aria-label="Next Anakin lineage photo"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                                <div class="dog-slider__dots" role="group" aria-label="Anakin lineage photo indicators">
+                                    <button type="button" class="dog-slider__dot is-active" aria-label="Photo 1 of 3" aria-current="true"></button>
+                                    <button type="button" class="dog-slider__dot" aria-label="Photo 2 of 3"></button>
+                                    <button type="button" class="dog-slider__dot" aria-label="Photo 3 of 3"></button>
+                                </div>
+                            </div>
+                            <p class="championship-lineage-stat">Anakin Skywalker (Mini Poodle): 10 Champions and 1 Grand Champion in 4 generations in AKC 🇺🇸.</p>
+                        </section>
+
+                        <section class="championship-lineage-card" aria-label="Jack Sparrow lineage section">
+                            <h4>🏅 Jack Sparrow's Father - AKC Champion</h4>
+                            <div class="dog-slider dog-slider--single championship-lineage-slider" data-dog-slider tabindex="0" aria-label="Championship photo for Jack Sparrow's father">
+                                <div class="dog-slider__slides">
+                                    <div class="dog-slider__slide is-active">
+                                        <img src="src/images/championship/jacksparrow/246368672026673319.jpeg" alt="AKC championship photo of Jack Sparrow's father" loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="championship-lineage-stat">Jack Sparrow (Standard Poodle): 9 Champions in 4 generations in AKC 🇺🇸.</p>
+                        </section>
+
+                        <section class="championship-lineage-card" aria-label="Gabby lineage section">
+                            <h4>🇮🇳 Gabby - KCI Champion Line</h4>
+                            <div class="dog-slider dog-slider--single championship-lineage-slider" data-dog-slider tabindex="0" aria-label="Lineage photo for Gabby">
+                                <div class="dog-slider__slides">
+                                    <div class="dog-slider__slide is-active">
+                                        <img src="src/images/dogs/gaby/WhatsApp%20Image%202026-04-14%20at%205.01.45%20PM.jpeg" alt="Gabby from KCI champion lineage" loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="championship-lineage-stat">Gabby (Black German Shepherd): 15 Champions in 5 generations in KCI 🇮🇳 (Kennel Club of India).</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -1136,22 +1252,165 @@ SEO optimized for Google search rankings
     <!-- SERVICE WORKER FOR PWA & PERFORMANCE -->
     <!-- ============================================ -->
     <script>
-        // Register service worker for offline functionality and caching
+        // Enhanced Service Worker registration with automatic updates
         if ('serviceWorker' in navigator) {
+            let refreshing = false;
+            
+            // Listen for service worker messages
+            navigator.serviceWorker.addEventListener('message', (event) => {
+                if (event.data.type === 'SW_UPDATED') {
+                    console.log('🔄 Service Worker updated to version:', event.data.version);
+                    showUpdateNotification();
+                }
+            });
+            
+            // Listen for controller change (new SW activated)
+            navigator.serviceWorker.addEventListener('controllerchange', () => {
+                if (refreshing) return;
+                refreshing = true;
+                console.log('🔄 New service worker activated, reloading page...');
+                window.location.reload();
+            });
+            
             window.addEventListener('load', function() {
                 navigator.serviceWorker.register('/sw.js')
                     .then(function(registration) {
-                        console.log('🎯 ServiceWorker registration successful:', registration.scope);
+                        console.log('✅ ServiceWorker registration successful');
                         
-                        // Check for updates
+                        // Check for updates immediately
+                        registration.update();
+                        
+                        // Set up periodic update checks
+                        setInterval(() => {
+                            console.log('🔍 Checking for service worker updates...');
+                            registration.update();
+                        }, 30000); // Check every 30 seconds
+                        
+                        // Listen for new service worker waiting
                         registration.addEventListener('updatefound', () => {
-                            console.log('🔄 New ServiceWorker version available');
+                            const newWorker = registration.installing;
+                            console.log('🆕 New service worker found, installing...');
+                            
+                            newWorker.addEventListener('statechange', () => {
+                                if (newWorker.state === 'waiting') {
+                                    console.log('⏳ New service worker installed, waiting to activate...');
+                                    showUpdateNotification(newWorker);
+                                }
+                            });
                         });
+                        
+                        // If there's already a waiting worker, show notification
+                        if (registration.waiting) {
+                            showUpdateNotification(registration.waiting);
+                        }
                     })
                     .catch(function(err) {
-                        console.log('❌ ServiceWorker registration failed:', err);
+                        console.error('❌ ServiceWorker registration failed:', err);
                     });
             });
+            
+            // Function to show update notification to user
+            function showUpdateNotification(worker) {
+                // Create update notification
+                const updateBanner = document.createElement('div');
+                updateBanner.id = 'update-banner';
+                updateBanner.innerHTML = `
+                    <div style="
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        background: linear-gradient(90deg, #4CAF50, #45a049);
+                        color: white;
+                        padding: 15px 20px;
+                        text-align: center;
+                        z-index: 10000;
+                        box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+                        animation: slideDown 0.3s ease-out;
+                    ">
+                        <style>
+                            @keyframes slideDown {
+                                from { transform: translateY(-100%); }
+                                to { transform: translateY(0); }
+                            }
+                        </style>
+                        <strong>🚀 New version available!</strong>
+                        <span style="margin: 0 15px;">Get the latest features and improvements.</span>
+                        <button onclick="updateApp()" style="
+                            background: white;
+                            color: #4CAF50;
+                            border: none;
+                            padding: 8px 16px;
+                            margin: 0 5px;
+                            border-radius: 20px;
+                            cursor: pointer;
+                            font-weight: bold;
+                        ">Update Now</button>
+                        <button onclick="dismissUpdate()" style="
+                            background: transparent;
+                            color: white;
+                            border: 1px solid white;
+                            padding: 8px 16px;
+                            margin: 0 5px;
+                            border-radius: 20px;
+                            cursor: pointer;
+                        ">Later</button>
+                    </div>
+                `;
+                
+                // Remove existing banner if present
+                const existingBanner = document.getElementById('update-banner');
+                if (existingBanner) {
+                    existingBanner.remove();
+                }
+                
+                document.body.appendChild(updateBanner);
+                
+                // Store worker reference for update function
+                window.waitingWorker = worker;
+            }
+            
+            // Global function to update app
+            window.updateApp = function() {
+                if (window.waitingWorker) {
+                    window.waitingWorker.postMessage({ type: 'SKIP_WAITING' });
+                } else {
+                    // Force reload if no waiting worker
+                    window.location.reload(true);
+                }
+                
+                // Remove update banner
+                const banner = document.getElementById('update-banner');
+                if (banner) banner.remove();
+            };
+            
+            // Global function to dismiss update notification
+            window.dismissUpdate = function() {
+                const banner = document.getElementById('update-banner');
+                if (banner) banner.remove();
+            };
+            
+            // Force cache clear and reload function (for development)
+            window.forceClearCache = function() {
+                if ('serviceWorker' in navigator) {
+                    navigator.serviceWorker.ready.then(registration => {
+                        const channel = new MessageChannel();
+                        channel.port1.onmessage = (event) => {
+                            if (event.data.success) {
+                                console.log('🗑️ Cache cleared, reloading...');
+                                window.location.reload(true);
+                            }
+                        };
+                        
+                        registration.active.postMessage(
+                            { type: 'CLEAR_CACHE' },
+                            [channel.port2]
+                        );
+                    });
+                } else {
+                    window.location.reload(true);
+                }
+            };
         }
         
         // Performance monitoring
@@ -1160,15 +1419,12 @@ SEO optimized for Google search rankings
             const perfData = performance.getEntriesByType('navigation')[0];
             const loadTime = perfData.loadEventEnd - perfData.fetchStart;
             
-            console.log(`⚡ Page load time: ${loadTime}ms`);
-            
             // Track Core Web Vitals
             if ('PerformanceObserver' in window) {
                 // Largest Contentful Paint
                 new PerformanceObserver((list) => {
                     const entries = list.getEntries();
                     const lastEntry = entries[entries.length - 1];
-                    console.log('🎨 LCP (Largest Contentful Paint):', lastEntry.startTime);
                     
                     // Track in analytics if needed
                     if (typeof gtag !== 'undefined') {
@@ -1183,7 +1439,6 @@ SEO optimized for Google search rankings
                 // First Input Delay
                 new PerformanceObserver((list) => {
                     for (const entry of list.getEntries()) {
-                        console.log('👆 FID (First Input Delay):', entry.processingStart - entry.startTime);
                         
                         if (typeof gtag !== 'undefined') {
                             gtag('event', 'web_vitals', {
@@ -1203,7 +1458,6 @@ SEO optimized for Google search rankings
                             cumulativeLayoutShift += entry.value;
                         }
                     }
-                    console.log('📐 CLS (Cumulative Layout Shift):', cumulativeLayoutShift);
                     
                     if (typeof gtag !== 'undefined') {
                         gtag('event', 'web_vitals', {
@@ -1217,10 +1471,9 @@ SEO optimized for Google search rankings
             
             // Image lazy loading optimization
             if ('loading' in HTMLImageElement.prototype) {
-                console.log('✅ Native lazy loading supported');
+                // Native lazy loading supported
             } else {
-                console.log('🔄 Implementing lazy loading fallback');
-                // Fallback for browsers without native lazy loading
+                // Implementing lazy loading fallback
                 const images = document.querySelectorAll('img[loading="lazy"]');
                 const imageObserver = new IntersectionObserver((entries, observer) => {
                     entries.forEach(entry => {

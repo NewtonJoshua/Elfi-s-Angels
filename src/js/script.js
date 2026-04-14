@@ -68,17 +68,26 @@ function initializeSmoothScrolling() {
             const target = document.querySelector(targetId);
             
             if (target) {
-                // Fixed header offset - navbar is 80px + generous padding
-                const headerOffset = 140; // Increased to ensure content appears below navbar
+                // Get navbar height dynamically
+                const navbar = document.querySelector('.navbar');
+                const navbarHeight = navbar ? navbar.offsetHeight : 80;
+                
+                // Add small buffer for better visual alignment
+                const headerOffset = navbarHeight + 20;
+                
                 const elementPosition = target.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
                 
                 window.scrollTo({
-                    top: offsetPosition,
+                    top: Math.max(0, offsetPosition), // Ensure we don't scroll to negative position
                     behavior: 'smooth'
                 });
                 
-                console.log(`Navigating to ${targetId} at position ${offsetPosition}, headerOffset: ${headerOffset}`);
+                // Close mobile menu if open
+                if (navMenu && navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
             }
         });
     });
@@ -708,15 +717,26 @@ if (mainContent && !mainContent.getAttribute('role')) {
 
 console.log('🐾 Elfi\'s Angels website loaded successfully with enhanced mobile and accessibility features! 🐾');
 
-// Championship Gallery Slideshow Functionality
+// Championship Gallery Slideshow Functionality (scoped to championship block only)
 let currentSlide = 0;
 let slideInterval;
+let championshipSlideshowContainer = null;
+
+function getChampionshipSlideshowRoot() {
+    return document.querySelector('.championship-gallery .slideshow-container');
+}
 
 function initializeSlideshow() {
-    const slides = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.dot');
-    const prevBtn = document.querySelector('.prev');
-    const nextBtn = document.querySelector('.next');
+    championshipSlideshowContainer = getChampionshipSlideshowRoot();
+    if (!championshipSlideshowContainer) {
+        console.log('❌ Championship slideshow container not found, skipping');
+        return;
+    }
+
+    const slides = championshipSlideshowContainer.querySelectorAll('.slide');
+    const dots = championshipSlideshowContainer.querySelectorAll('.dot');
+    const prevBtn = championshipSlideshowContainer.querySelector('.prev');
+    const nextBtn = championshipSlideshowContainer.querySelector('.next');
     
     console.log('🔧 Slideshow elements found:', {
         slides: slides.length,
@@ -763,25 +783,24 @@ function initializeSlideshow() {
     startAutoSlide();
     
     // Pause on hover
-    const slideshowContainer = document.querySelector('.slideshow-container');
-    if (slideshowContainer) {
-        slideshowContainer.addEventListener('mouseenter', () => {
-            console.log('⏸️ Slideshow paused (mouse enter)');
-            stopAutoSlide();
-        });
-        slideshowContainer.addEventListener('mouseleave', () => {
-            console.log('▶️ Slideshow resumed (mouse leave)');
-            startAutoSlide();
-        });
-    }
+    championshipSlideshowContainer.addEventListener('mouseenter', () => {
+        console.log('⏸️ Slideshow paused (mouse enter)');
+        stopAutoSlide();
+    });
+    championshipSlideshowContainer.addEventListener('mouseleave', () => {
+        console.log('▶️ Slideshow resumed (mouse leave)');
+        startAutoSlide();
+    });
     
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
+    // Keyboard navigation only while the championship slideshow is focused
+    championshipSlideshowContainer.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft') {
+            e.preventDefault();
             console.log('⬅️ Left arrow key pressed');
             changeSlide(-1);
         }
         if (e.key === 'ArrowRight') {
+            e.preventDefault();
             console.log('➡️ Right arrow key pressed');
             changeSlide(1);
         }
@@ -791,8 +810,11 @@ function initializeSlideshow() {
 }
 
 function showSlide(index) {
-    const slides = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.dot');
+    const root = championshipSlideshowContainer || getChampionshipSlideshowRoot();
+    if (!root) return;
+
+    const slides = root.querySelectorAll('.slide');
+    const dots = root.querySelectorAll('.dot');
     
     if (slides.length === 0) {
         console.log('❌ No slides found in showSlide function');
@@ -862,6 +884,61 @@ function stopAutoSlide() {
     }
 }
 
+/**
+ * Mini carousels for Elfi's Angels portfolio (each dog folder, max 3 photos).
+ */
+function initDogPortfolioSliders() {
+    document.querySelectorAll('[data-dog-slider]').forEach((slider) => {
+        const slides = slider.querySelectorAll('.dog-slider__slide');
+        const dots = slider.querySelectorAll('.dog-slider__dot');
+        const prev = slider.querySelector('.dog-slider__nav--prev');
+        const next = slider.querySelector('.dog-slider__nav--next');
+
+        if (slides.length <= 1) {
+            return;
+        }
+
+        let idx = 0;
+
+        function show(nextIdx) {
+            idx = (nextIdx + slides.length) % slides.length;
+            slides.forEach((slide, j) => {
+                slide.classList.toggle('is-active', j === idx);
+            });
+            dots.forEach((dot, j) => {
+                const on = j === idx;
+                dot.classList.toggle('is-active', on);
+                dot.setAttribute('aria-current', on ? 'true' : 'false');
+            });
+        }
+
+        prev.addEventListener('click', (e) => {
+            e.stopPropagation();
+            show(idx - 1);
+        });
+        next.addEventListener('click', (e) => {
+            e.stopPropagation();
+            show(idx + 1);
+        });
+        dots.forEach((dot, j) => {
+            dot.addEventListener('click', (e) => {
+                e.stopPropagation();
+                show(j);
+            });
+        });
+
+        slider.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                show(idx - 1);
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                show(idx + 1);
+            }
+        });
+    });
+}
+
 // Track video link clicks for analytics
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🎬 Initializing slideshow and video tracking...');
@@ -870,6 +947,8 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         initializeSlideshow();
     }, 100);
+
+    initDogPortfolioSliders();
     
     // Track video clicks
     const videoLinks = document.querySelectorAll('.video-thumbnail-link');

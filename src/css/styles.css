@@ -25,6 +25,39 @@ Version: 2.0 (Mobile Optimized)
 */
 
 /* ============================================ */
+/* SERVICE WORKER UPDATE NOTIFICATION STYLES */
+/* ============================================ */
+
+/* Ensure update banner doesn't interfere with fixed navbar */
+#update-banner {
+    z-index: 10001 !important; /* Above navbar which is 1000 */
+}
+
+/* Adjust body padding when update banner is present */
+body.update-banner-visible {
+    padding-top: 60px;
+}
+
+/* Update banner responsive styles */
+@media (max-width: 768px) {
+    #update-banner div {
+        padding: 12px 15px !important;
+        font-size: 14px !important;
+    }
+    
+    #update-banner button {
+        padding: 6px 12px !important;
+        font-size: 12px !important;
+        margin: 5px 2px !important;
+    }
+    
+    #update-banner span {
+        display: block !important;
+        margin: 8px 0 !important;
+    }
+}
+
+/* ============================================ */
 /* 1. CSS RESET & BASE STYLES */
 /* ============================================ */
 
@@ -261,7 +294,7 @@ body {
     height: 100vh;
     display: flex;
     align-items: center;
-    padding: 0 30px;
+    padding: 140px 30px 0;
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
     position: relative;
     overflow: hidden;
@@ -761,6 +794,78 @@ body {
     background-color: #8B4513;
 }
 
+/* Champion lineage full-width row */
+.championship-lineage {
+    width: 100%;
+    background: rgba(10, 10, 10, 0.95);
+    border-radius: 20px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 2rem;
+}
+
+.championship-lineage h3 {
+    font-size: 2.5rem;
+    color: #C0C0C0;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.championship-lineage > p {
+    color: #c8c8c8;
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.championship-lineage-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.championship-lineage-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    padding: 1rem;
+}
+
+.championship-lineage-card h4 {
+    color: #f0f0f0;
+    font-size: 1rem;
+    margin: 0 0 0.8rem;
+    line-height: 1.35;
+    letter-spacing: 0.4px;
+}
+
+.championship-lineage-slider {
+    height: 320px;
+}
+
+.championship-lineage-slider .dog-slider__dots {
+    bottom: 12px;
+}
+
+@media (max-width: 1200px) {
+    .championship-lineage-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.championship-lineage-stat {
+    margin: 0.85rem 0 0;
+    color: #e2e2e2;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
 /* YouTube Videos Styles */
 .youtube-videos h3 {
     font-size: 2.5rem; /* Same size as championship */
@@ -812,8 +917,44 @@ body {
     transition: transform 0.3s ease;
 }
 
+.video-thumbnail video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background: #000000;
+    transition: transform 0.3s ease;
+}
+
 .video-thumbnail-link:hover .video-thumbnail img {
     transform: scale(1.05);
+}
+
+.video-thumbnail-link:hover .video-thumbnail video {
+    transform: scale(1.05);
+}
+
+.video-thumbnail-link--placeholder {
+    pointer-events: none;
+}
+
+.video-thumbnail-link--placeholder .video-thumbnail {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px dashed rgba(192, 192, 192, 0.35);
+    box-shadow: none;
+}
+
+.video-thumbnail-link--placeholder:hover .video-thumbnail {
+    box-shadow: none;
+}
+
+.video-placeholder-empty {
+    width: 100%;
+    height: 100%;
+}
+
+.video-thumbnail-link--placeholder h4 {
+    visibility: hidden;
 }
 
 .play-overlay {
@@ -859,6 +1000,10 @@ body {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+
+    .championship-lineage-grid {
+        grid-template-columns: 1fr;
+    }
     
     .championship-videos-container {
         grid-template-columns: 1fr; /* Stack vertically on mobile */
@@ -876,6 +1021,7 @@ body {
         height: auto;
     }
     
+    .championship-lineage h3,
     .championship-gallery h3,
     .youtube-videos h3 {
         font-size: 2rem;
@@ -1028,7 +1174,7 @@ body {
 /* Portfolio Grid Styles */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
 }
@@ -1078,6 +1224,151 @@ body {
     font-weight: 300;
     letter-spacing: 1px;
     text-align: center;
+}
+
+/* Elfi's Angels — per-dog photo sliders inside a frame */
+.dog-photo-frame {
+    position: relative;
+    border-radius: 10px;
+    padding: 5px;
+    background: linear-gradient(
+        135deg,
+        rgba(212, 175, 55, 0.45) 0%,
+        rgba(192, 192, 192, 0.35) 35%,
+        rgba(139, 69, 19, 0.4) 70%,
+        rgba(212, 175, 55, 0.35) 100%
+    );
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.25),
+        0 10px 28px rgba(0, 0, 0, 0.45);
+}
+
+.dog-photo-frame .portfolio-overlay {
+    z-index: 4;
+}
+
+.dog-slider {
+    position: relative;
+    height: 200px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #0d0d0d;
+}
+
+.dog-slider__slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Stack slides in one slot (avoid inset:0 — ignored in some engines → vertical stack) */
+.dog-slider__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dog-slider__slide.is-active {
+    display: block;
+    z-index: 1;
+}
+
+.dog-portfolio-card .dog-slider__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(20%) contrast(1.1);
+    transition: filter 0.3s ease;
+}
+
+.dog-portfolio-card:hover .dog-slider__slide img {
+    filter: grayscale(0%) contrast(1.2);
+}
+
+.dog-slider__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.55);
+    color: #f5f5f5;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.dog-slider__nav:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.dog-slider__nav:focus-visible {
+    outline: 2px solid #d4af37;
+    outline-offset: 2px;
+}
+
+.dog-slider__nav--prev {
+    left: 6px;
+}
+
+.dog-slider__nav--next {
+    right: 6px;
+}
+
+.dog-slider__dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 44px;
+    z-index: 3;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.dog-slider__dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.45);
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.dog-slider__dot:hover {
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.dog-slider__dot.is-active {
+    background: #d4af37;
+    transform: scale(1.2);
+}
+
+.dog-slider__dot:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+.dog-slider--single .dog-slider__nav,
+.dog-slider--single .dog-slider__dots {
+    display: none;
 }
 
 /* Ensure equal heights for about sections */
@@ -2182,7 +2473,7 @@ body {
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 100px 15px 40px;
+        padding: 140px 15px 40px;
         height: auto;
         min-height: 100vh;
         overflow: visible;
@@ -2541,7 +2832,7 @@ body {
 
 @media (max-width: 480px) {
     .hero {
-        padding: 100px 15px 40px;
+        padding: 140px 15px 40px;
     }
     
     .hero-content h1 {
