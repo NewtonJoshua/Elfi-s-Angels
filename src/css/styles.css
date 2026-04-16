@@ -3535,3 +3535,58 @@ section.animate {
         margin-bottom: 2rem;
     }
 }
+
+/* Final mobile override: Elfi's Angels section visibility/layout */
+@media (max-width: 768px) {
+    .about-content {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+    }
+
+    .about-portfolio {
+        width: 100% !important;
+        max-width: 100% !important;
+        order: 2 !important;
+        padding: 0 !important;
+    }
+
+    .about-portfolio h3 {
+        font-size: 1.9rem !important;
+        justify-content: center !important;
+        text-align: center !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .about-portfolio .portfolio-grid {
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 1rem 0 0 !important;
+        gap: 1rem !important;
+    }
+
+    .about-portfolio .portfolio-item {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .about-portfolio .dog-slider {
+        height: 240px !important;
+    }
+
+    .about-portfolio .portfolio-overlay h4 {
+        font-size: 0.95rem !important;
+        letter-spacing: 0.4px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-portfolio .dog-slider {
+        height: 215px !important;
+    }
+
+    .about-portfolio .portfolio-overlay h4 {
+        font-size: 0.85rem !important;
+    }
+}

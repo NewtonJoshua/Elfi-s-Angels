@@ -200,7 +200,7 @@ Version: 2.0 (Mobile Performance Focus)
     .hero {
         display: flex !important;                     /* Flex layout */
         flex-direction: column !important;           /* Stack vertically */
-        padding: 80px 20px 40px !important;          /* Account for navbar + padding */
+        padding: 140px 20px 40px !important;         /* Account for navbar + proper spacing */
         min-height: 100vh !important;                /* Full screen height */
         text-align: center !important;               /* Center all content */
         justify-content: center !important;          /* Center vertically */
