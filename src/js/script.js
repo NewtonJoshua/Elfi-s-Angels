@@ -37,17 +37,20 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('🐾 Initializing Elfi\'s Angels website...');
     
     // Initialize AOS (Animate On Scroll) library with optimized settings
-    AOS.init({
-        duration: 1000,              // Animation duration in milliseconds
-        easing: 'ease-out-cubic',    // Smooth easing function
-        once: true,                  // Only animate once (performance optimization)
-        offset: 100,                 // Trigger animations 100px before element enters viewport
-        delay: 0,                    // No global delay
-        anchorPlacement: 'top-bottom' // Animation trigger point
-    });
+    if (window.AOS) {
+        AOS.init({
+            duration: 1000,              // Animation duration in milliseconds
+            easing: 'ease-out-cubic',    // Smooth easing function
+            once: true,                  // Only animate once (performance optimization)
+            offset: 100,                 // Trigger animations 100px before element enters viewport
+            delay: 0,                    // No global delay
+            anchorPlacement: 'top-bottom' // Animation trigger point
+        });
+    }
     
     // Initialize core functionality modules
     initializeSmoothScrolling();     // Enhanced smooth scroll behavior
+    initializeRouteScrolling();      // Direct route support for section links
     initializeParallaxEffects();     // Parallax scrolling effects
     initializeStaggerAnimations();   // Staggered animations for grid items
     
@@ -58,6 +61,23 @@ document.addEventListener('DOMContentLoaded', function() {
 // 3. SMOOTH SCROLLING ENHANCEMENT
 // ============================================
 // Enhanced smooth scrolling for internal anchor links
+function scrollToSection(target, behavior = 'smooth') {
+    if (!target) {
+        return;
+    }
+
+    const navbar = document.querySelector('.navbar');
+    const navbarHeight = navbar ? navbar.offsetHeight : 80;
+    const headerOffset = navbarHeight + 20;
+    const elementPosition = target.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+        top: Math.max(0, offsetPosition),
+        behavior
+    });
+}
+
 function initializeSmoothScrolling() {
     // Simple smooth scrolling to fixed header positions
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -68,20 +88,7 @@ function initializeSmoothScrolling() {
             const target = document.querySelector(targetId);
             
             if (target) {
-                // Get navbar height dynamically
-                const navbar = document.querySelector('.navbar');
-                const navbarHeight = navbar ? navbar.offsetHeight : 80;
-                
-                // Add small buffer for better visual alignment
-                const headerOffset = navbarHeight + 20;
-                
-                const elementPosition = target.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                
-                window.scrollTo({
-                    top: Math.max(0, offsetPosition), // Ensure we don't scroll to negative position
-                    behavior: 'smooth'
-                });
+                scrollToSection(target);
                 
                 // Close mobile menu if open
                 if (navMenu && navMenu.classList.contains('active')) {
@@ -91,6 +98,49 @@ function initializeSmoothScrolling() {
             }
         });
     });
+}
+
+function initializeRouteScrolling() {
+    if (window.location.pathname !== '/gsd') {
+        return;
+    }
+
+    let attempts = 0;
+    let userInterrupted = false;
+    const cancelRouteScroll = () => {
+        userInterrupted = true;
+    };
+
+    window.addEventListener('wheel', cancelRouteScroll, { once: true, passive: true });
+    window.addEventListener('touchstart', cancelRouteScroll, { once: true, passive: true });
+    window.addEventListener('keydown', cancelRouteScroll, { once: true });
+
+    const scrollToGsd = () => {
+        if (userInterrupted) {
+            return;
+        }
+
+        const target = document.querySelector('#gsd');
+        if (!target) {
+            return;
+        }
+
+        scrollToSection(target, 'auto');
+        attempts += 1;
+
+        const navbar = document.querySelector('.navbar');
+        const expectedTop = (navbar ? navbar.offsetHeight : 80) + 20;
+        const currentTop = target.getBoundingClientRect().top;
+
+        if (attempts < 10 && Math.abs(currentTop - expectedTop) > 24) {
+            setTimeout(scrollToGsd, 500);
+        }
+    };
+
+    requestAnimationFrame(scrollToGsd);
+    window.addEventListener('load', scrollToGsd, { once: true });
+    setTimeout(scrollToGsd, 350);
+    setTimeout(scrollToGsd, 1500);
 }
 
 // ============================================
@@ -245,7 +295,9 @@ window.addEventListener('scroll', () => {
     // Update navigation link active states
     document.querySelectorAll('.nav-link').forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
+        const href = link.getAttribute('href');
+        const isCurrentSection = href === `#${current}` || (current === 'gsd' && href === '/gsd');
+        if (isCurrentSection) {
             link.classList.add('active');
             // Add subtle scale animation to active link
             link.style.transform = 'scale(1.1)';
@@ -642,7 +694,9 @@ scrollToTopBtn.addEventListener('click', () => {
 // Floating puppies button enhanced visibility
 document.addEventListener('DOMContentLoaded', () => {
     const floatingPuppies = document.getElementById('floatingPuppies');
+    const floatingButtons = document.querySelector('.floating-buttons');
     const puppiesSection = document.getElementById('puppies');
+    const dogsSection = document.querySelector('.dogs-section');
     
     function checkPuppiesVisibility() {
         if (!puppiesSection || !floatingPuppies) return;
@@ -665,6 +719,28 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', checkPuppiesVisibility);
     window.addEventListener('resize', checkPuppiesVisibility);
     checkPuppiesVisibility();
+
+    if (floatingButtons && dogsSection) {
+        function updateDogsFloatingState() {
+            const rect = dogsSection.getBoundingClientRect();
+            const isInView = rect.top < window.innerHeight - 80 && rect.bottom > 160;
+            floatingButtons.classList.toggle('floating-buttons--compact', isInView);
+        }
+
+        const dogsSectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                floatingButtons.classList.toggle('floating-buttons--compact', entry.isIntersecting);
+            });
+        }, {
+            threshold: 0.18,
+            rootMargin: '-90px 0px -20% 0px'
+        });
+
+        dogsSectionObserver.observe(dogsSection);
+        window.addEventListener('scroll', updateDogsFloatingState, { passive: true });
+        window.addEventListener('resize', updateDogsFloatingState);
+        updateDogsFloatingState();
+    }
 });
 
 // Performance monitoring

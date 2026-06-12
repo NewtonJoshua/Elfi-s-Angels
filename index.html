@@ -22,25 +22,19 @@ SEO optimized for Google search rankings
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://images.unsplash.com">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     
     <!-- DNS prefetch for faster third-party connections -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
-    <link rel="dns-prefetch" href="//images.unsplash.com">
     
     <!-- Resource hints for better performance -->
-    <link rel="preload" href="src/css/styles.css" as="style">
-    <link rel="preload" href="src/css/premium-luxury.css" as="style">
-    <link rel="preload" href="src/js/script.js" as="script">
-    
-    <!-- Performance optimization hints -->
-    <link rel="prefetch" href="https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80">
-    <link rel="prefetch" href="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80">
+    <link rel="preload" href="src/css/styles.css?v=1.4.35" as="style">
+    <link rel="preload" href="src/css/premium-luxury.css?v=1.4.35" as="style">
+    <link rel="preload" href="src/js/script.js?v=1.4.35" as="script">
+    <link rel="preload" href="src/images/optimized/dogs/cover/WhatsApp%20Image%202026-04-14%20at%205.36.57%20PM.jpeg" as="image" fetchpriority="high">
     
     <!-- Critical resource hints -->
-    <link rel="modulepreload" href="src/js/script.js">
     <meta name="format-detection" content="telephone=no">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
@@ -403,10 +397,10 @@ SEO optimized for Google search rankings
     <!-- EXTERNAL STYLESHEETS (OPTIMIZED) -->
     <!-- ============================================ -->
     <!-- Load main CSS with high priority -->
-    <link rel="stylesheet" href="src/css/styles.css" media="all">
+    <link rel="stylesheet" href="src/css/styles.css?v=1.4.35" media="all">
     
     <!-- Premium luxury enhancements -->
-    <link rel="stylesheet" href="src/css/premium-luxury.css" media="all">
+    <link rel="stylesheet" href="src/css/premium-luxury.css?v=1.4.35" media="all">
     
     <!-- Mobile-specific CSS fix -->
     <link rel="stylesheet" href="src/css/mobile-fix.css" media="screen and (max-width: 768px)">
@@ -485,6 +479,9 @@ SEO optimized for Google search rankings
                 </li>
                 <li class="nav-item" role="none">
                     <a href="#about" class="nav-link" role="menuitem" aria-label="Go to About section">About</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="/gsd" class="nav-link" role="menuitem" aria-label="Go to Elite German Shepherd Dogs section">GSD</a>
                 </li>
                 <li class="nav-item" role="none">
                     <a href="#footer" class="nav-link" role="menuitem" aria-label="Go to Contact section">Contact</a>
@@ -567,11 +564,13 @@ SEO optimized for Google search rankings
                 
                 <!-- Hero Image with Lazy Loading -->
                 <div class="hero-image" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="300">
-                    <img src="src/images/dogs/cover/WhatsApp%20Image%202026-04-14%20at%205.36.57%20PM.jpeg" 
+                    <img src="src/images/optimized/dogs/cover/WhatsApp%20Image%202026-04-14%20at%205.36.57%20PM.jpeg" 
                          alt="Premium Poodle Puppies from Elfi's Angels in the intro section" 
                          width="600" 
                          height="400"
                          loading="eager"
+                         fetchpriority="high"
+                         decoding="async"
                          onerror="this.src='https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'">
                 </div>
             </div>
@@ -645,13 +644,14 @@ SEO optimized for Google search rankings
                 <!-- Puppies Grid -->
                 <div class="puppies-grid" role="list">
                     <!-- Puppy Card 1: Male 1 -->
-                    <article class="puppy-card" role="listitem" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <article class="puppy-card puppy-card--sold" role="listitem" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                         <img src="src/images/puppies/WhatsApp%20Image%202026-04-14%20at%204.18.40%20PM%20%281%29.jpeg" 
-                             alt="Male 1 - 4 week old red Mini Poodle puppy available for sale"
+                             alt="Male 1 - sold red Mini Poodle puppy"
                              loading="lazy"
                              width="500"
                              height="400"
                              decoding="async">
+                        <span class="sold-badge" aria-label="Sold">Sold</span>
                         <div class="card-content">
                             <h3><span class="gender-prefix"><i class="fas fa-mars" aria-hidden="true"></i> Male</span> Male 1</h3>
                             <p class="details"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 4 weeks • <i class="fas fa-palette" aria-hidden="true"></i> Red</p>
@@ -663,12 +663,13 @@ SEO optimized for Google search rankings
                     </article>
                     
                     <!-- Puppy Card 2: Male 2 -->
-                    <article class="puppy-card" role="listitem" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <article class="puppy-card puppy-card--sold" role="listitem" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                         <img src="src/images/puppies/WhatsApp%20Image%202026-04-14%20at%204.18.40%20PM%20%283%29.jpeg" 
-                             alt="Male 2 - 4 week old apricot Mini Poodle puppy available for sale"
+                             alt="Male 2 - sold apricot Mini Poodle puppy"
                              loading="lazy"
                              width="300"
                              height="250">
+                        <span class="sold-badge" aria-label="Sold">Sold</span>
                         <div class="card-content">
                             <h3><span class="gender-prefix"><i class="fas fa-mars" aria-hidden="true"></i> Male</span> Male 2</h3>
                             <p class="details"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 4 weeks • <i class="fas fa-palette" aria-hidden="true"></i> Apricot</p>
@@ -680,12 +681,13 @@ SEO optimized for Google search rankings
                     </article>
                     
                     <!-- Puppy Card 3: Male 3 -->
-                    <article class="puppy-card" role="listitem" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <article class="puppy-card puppy-card--sold" role="listitem" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                         <img src="src/images/puppies/WhatsApp%20Image%202026-04-14%20at%204.18.41%20PM.jpeg" 
-                             alt="Male 3 - 4 week old apricot Mini Poodle puppy available for sale"
+                             alt="Male 3 - sold apricot Mini Poodle puppy"
                              loading="lazy"
                              width="300"
                              height="250">
+                        <span class="sold-badge" aria-label="Sold">Sold</span>
                         <div class="card-content">
                             <h3><span class="gender-prefix"><i class="fas fa-mars" aria-hidden="true"></i> Male</span> Male 3</h3>
                             <p class="details"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 4 weeks • <i class="fas fa-palette" aria-hidden="true"></i> Apricot</p>
@@ -697,12 +699,13 @@ SEO optimized for Google search rankings
                     </article>
 
                     <!-- Puppy Card 4: Male 4 -->
-                    <article class="puppy-card" role="listitem" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                    <article class="puppy-card puppy-card--sold" role="listitem" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                         <img src="src/images/puppies/WhatsApp%20Image%202026-04-14%20at%204.18.41%20PM%20%282%29.jpeg" 
-                             alt="Male 4 - 4 week old red Mini Poodle puppy available for sale"
+                             alt="Male 4 - sold red Mini Poodle puppy"
                              loading="lazy"
                              width="300"
                              height="250">
+                        <span class="sold-badge" aria-label="Sold">Sold</span>
                         <div class="card-content">
                             <h3><span class="gender-prefix"><i class="fas fa-mars" aria-hidden="true"></i> Male</span> Male 4</h3>
                             <p class="details"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 4 weeks • <i class="fas fa-palette" aria-hidden="true"></i> Red</p>
@@ -853,13 +856,13 @@ SEO optimized for Google search rankings
                                     <div class="dog-slider" data-dog-slider tabindex="0" aria-label="Photos of Anakin Skywalker">
                                         <div class="dog-slider__slides">
                                             <div class="dog-slider__slide is-active">
-                                                <img src="src/images/dogs/anakkin/MATZ0842.jpg" alt="Anakin Skywalker, black Mini Poodle" loading="lazy" width="400" height="300">
+                                                <img src="src/images/optimized/dogs/anakkin/MATZ0842.jpg" alt="Anakin Skywalker, black Mini Poodle" loading="lazy" width="400" height="300">
                                             </div>
                                             <div class="dog-slider__slide">
-                                                <img src="src/images/dogs/anakkin/MATZ0852.jpg" alt="Anakin Skywalker, black Mini Poodle" loading="lazy" width="400" height="300">
+                                                <img src="src/images/optimized/dogs/anakkin/MATZ0852.jpg" alt="Anakin Skywalker, black Mini Poodle" loading="lazy" width="400" height="300">
                                             </div>
                                             <div class="dog-slider__slide">
-                                                <img src="src/images/dogs/anakkin/MATZ0862.jpg" alt="Anakin Skywalker, black Mini Poodle" loading="lazy" width="400" height="300">
+                                                <img src="src/images/optimized/dogs/anakkin/MATZ0862.jpg" alt="Anakin Skywalker, black Mini Poodle" loading="lazy" width="400" height="300">
                                             </div>
                                         </div>
                                         <button type="button" class="dog-slider__nav dog-slider__nav--prev" aria-label="Previous photo of Anakin Skywalker"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
@@ -879,13 +882,13 @@ SEO optimized for Google search rankings
                                     <div class="dog-slider" data-dog-slider tabindex="0" aria-label="Photos of Solo and Leia">
                                         <div class="dog-slider__slides">
                                             <div class="dog-slider__slide is-active">
-                                                <img src="src/images/dogs/solo%20and%20leia/MATZ1142.jpg" alt="Solo and Leia together, Mini Poodles" loading="lazy" width="400" height="300">
+                                                <img src="src/images/optimized/dogs/solo%20and%20leia/MATZ1142.jpg" alt="Solo and Leia together, Mini Poodles" loading="lazy" width="400" height="300">
                                             </div>
                                             <div class="dog-slider__slide">
-                                                <img src="src/images/dogs/solo%20and%20leia/MATZ1146.jpg" alt="Solo and Leia together, Mini Poodles" loading="lazy" width="400" height="300">
+                                                <img src="src/images/optimized/dogs/solo%20and%20leia/MATZ1146.jpg" alt="Solo and Leia together, Mini Poodles" loading="lazy" width="400" height="300">
                                             </div>
                                             <div class="dog-slider__slide">
-                                                <img src="src/images/dogs/solo%20and%20leia/MATZ1190.jpg" alt="Solo and Leia together, Mini Poodles" loading="lazy" width="400" height="300">
+                                                <img src="src/images/optimized/dogs/solo%20and%20leia/MATZ1190.jpg" alt="Solo and Leia together, Mini Poodles" loading="lazy" width="400" height="300">
                                             </div>
                                         </div>
                                         <button type="button" class="dog-slider__nav dog-slider__nav--prev" aria-label="Previous photo of Solo and Leia"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
@@ -905,13 +908,13 @@ SEO optimized for Google search rankings
                                     <div class="dog-slider" data-dog-slider tabindex="0" aria-label="Photos of Han Solo">
                                         <div class="dog-slider__slides">
                                             <div class="dog-slider__slide is-active">
-                                                <img src="src/images/dogs/solo/MATZ1094.jpg" alt="Han Solo, Mini Poodle" loading="lazy" width="400" height="300">
+                                                <img src="src/images/optimized/dogs/solo/MATZ1094.jpg" alt="Han Solo, Mini Poodle" loading="lazy" width="400" height="300">
                                             </div>
                                             <div class="dog-slider__slide">
-                                                <img src="src/images/dogs/solo/MATZ1119.jpg" alt="Han Solo, Mini Poodle" loading="lazy" width="400" height="300">
+                                                <img src="src/images/optimized/dogs/solo/MATZ1119.jpg" alt="Han Solo, Mini Poodle" loading="lazy" width="400" height="300">
                                             </div>
                                             <div class="dog-slider__slide">
-                                                <img src="src/images/dogs/solo/MATZ1139.jpg" alt="Han Solo, Mini Poodle" loading="lazy" width="400" height="300">
+                                                <img src="src/images/optimized/dogs/solo/MATZ1139.jpg" alt="Han Solo, Mini Poodle" loading="lazy" width="400" height="300">
                                             </div>
                                         </div>
                                         <button type="button" class="dog-slider__nav dog-slider__nav--prev" aria-label="Previous photo of Han Solo"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
@@ -931,13 +934,13 @@ SEO optimized for Google search rankings
                                     <div class="dog-slider" data-dog-slider tabindex="0" aria-label="Photos of Princess Leia">
                                         <div class="dog-slider__slides">
                                             <div class="dog-slider__slide is-active">
-                                                <img src="src/images/dogs/leia/MATZ0949.jpg" alt="Princess Leia, cream Mini Poodle" loading="lazy" width="400" height="300">
+                                                <img src="src/images/optimized/dogs/leia/MATZ0949.jpg" alt="Princess Leia, cream Mini Poodle" loading="lazy" width="400" height="300">
                                             </div>
                                             <div class="dog-slider__slide">
-                                                <img src="src/images/dogs/leia/MATZ0986.jpg" alt="Princess Leia, cream Mini Poodle" loading="lazy" width="400" height="300">
+                                                <img src="src/images/optimized/dogs/leia/MATZ0986.jpg" alt="Princess Leia, cream Mini Poodle" loading="lazy" width="400" height="300">
                                             </div>
                                             <div class="dog-slider__slide">
-                                                <img src="src/images/dogs/leia/MATZ1263.jpg" alt="Princess Leia, cream Mini Poodle" loading="lazy" width="400" height="300">
+                                                <img src="src/images/optimized/dogs/leia/MATZ1263.jpg" alt="Princess Leia, cream Mini Poodle" loading="lazy" width="400" height="300">
                                             </div>
                                         </div>
                                         <button type="button" class="dog-slider__nav dog-slider__nav--prev" aria-label="Previous photo of Princess Leia"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
@@ -957,13 +960,13 @@ SEO optimized for Google search rankings
                                     <div class="dog-slider" data-dog-slider tabindex="0" aria-label="Photos of Sabine Wren">
                                         <div class="dog-slider__slides">
                                             <div class="dog-slider__slide is-active">
-                                                <img src="src/images/dogs/sabine/MATZ1386.jpg" alt="Sabine Wren, Mini Poodle" loading="lazy" width="400" height="300">
+                                                <img src="src/images/optimized/dogs/sabine/MATZ1386.jpg" alt="Sabine Wren, Mini Poodle" loading="lazy" width="400" height="300">
                                             </div>
                                             <div class="dog-slider__slide">
-                                                <img src="src/images/dogs/sabine/MATZ1444.jpg" alt="Sabine Wren, Mini Poodle" loading="lazy" width="400" height="300">
+                                                <img src="src/images/optimized/dogs/sabine/MATZ1444.jpg" alt="Sabine Wren, Mini Poodle" loading="lazy" width="400" height="300">
                                             </div>
                                             <div class="dog-slider__slide">
-                                                <img src="src/images/dogs/sabine/MATZ1447.jpg" alt="Sabine Wren, Mini Poodle" loading="lazy" width="400" height="300">
+                                                <img src="src/images/optimized/dogs/sabine/MATZ1447.jpg" alt="Sabine Wren, Mini Poodle" loading="lazy" width="400" height="300">
                                             </div>
                                         </div>
                                         <button type="button" class="dog-slider__nav dog-slider__nav--prev" aria-label="Previous photo of Sabine Wren"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
@@ -983,7 +986,7 @@ SEO optimized for Google search rankings
                                     <div class="dog-slider dog-slider--single" data-dog-slider tabindex="0" aria-label="Photo of Hera Syndulla">
                                         <div class="dog-slider__slides">
                                             <div class="dog-slider__slide is-active">
-                                                <img src="src/images/dogs/hera/image.png" alt="Hera Syndulla, Mini Poodle" loading="lazy" width="400" height="300">
+                                                <img src="src/images/optimized/dogs/hera/image.jpg" alt="Hera Syndulla, Mini Poodle" loading="lazy" width="400" height="300">
                                             </div>
                                         </div>
                                     </div>
@@ -996,7 +999,7 @@ SEO optimized for Google search rankings
                                     <div class="dog-slider dog-slider--single" data-dog-slider tabindex="0" aria-label="Photo of Bo-Katan Kryze">
                                         <div class="dog-slider__slides">
                                             <div class="dog-slider__slide is-active">
-                                                <img src="src/images/dogs/bokatan/image.png" alt="Bo-Katan Kryze, Mini Poodle" loading="lazy" width="400" height="300">
+                                                <img src="src/images/optimized/dogs/bokatan/image.jpg" alt="Bo-Katan Kryze, Mini Poodle" loading="lazy" width="400" height="300">
                                             </div>
                                         </div>
                                     </div>
@@ -1009,13 +1012,13 @@ SEO optimized for Google search rankings
                                     <div class="dog-slider" data-dog-slider tabindex="0" aria-label="Photos of Padmé Amidala">
                                         <div class="dog-slider__slides">
                                             <div class="dog-slider__slide is-active">
-                                                <img src="src/images/dogs/padme/MATZ1069.jpg" alt="Padmé Amidala, Mini Poodle" loading="lazy" width="400" height="300">
+                                                <img src="src/images/optimized/dogs/padme/MATZ1069.jpg" alt="Padmé Amidala, Mini Poodle" loading="lazy" width="400" height="300">
                                             </div>
                                             <div class="dog-slider__slide">
-                                                <img src="src/images/dogs/padme/MATZ1300.jpg" alt="Padmé Amidala, Mini Poodle" loading="lazy" width="400" height="300">
+                                                <img src="src/images/optimized/dogs/padme/MATZ1300.jpg" alt="Padmé Amidala, Mini Poodle" loading="lazy" width="400" height="300">
                                             </div>
                                             <div class="dog-slider__slide">
-                                                <img src="src/images/dogs/padme/MATZ1332.jpg" alt="Padmé Amidala, Mini Poodle" loading="lazy" width="400" height="300">
+                                                <img src="src/images/optimized/dogs/padme/MATZ1332.jpg" alt="Padmé Amidala, Mini Poodle" loading="lazy" width="400" height="300">
                                             </div>
                                         </div>
                                         <button type="button" class="dog-slider__nav dog-slider__nav--prev" aria-label="Previous photo of Padmé Amidala"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
@@ -1029,26 +1032,30 @@ SEO optimized for Google search rankings
                                     <div class="portfolio-overlay"><h4>Padmé Amidala (Toy Poodle)</h4></div>
                                 </div>
                             </div>
-                            <!-- Gabby The Guardian -->
+                            <!-- Mandalorian -->
                             <div class="portfolio-item dog-portfolio-card" role="listitem" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="1100">
                                 <div class="dog-photo-frame">
-                                    <div class="dog-slider" data-dog-slider tabindex="0" aria-label="Photos of Gabby The Guardian">
+                                    <div class="dog-slider" data-dog-slider tabindex="0" aria-label="Photos of Mandalorian">
                                         <div class="dog-slider__slides">
                                             <div class="dog-slider__slide is-active">
-                                                <img src="src/images/dogs/gaby/WhatsApp%20Image%202026-04-14%20at%205.00.50%20PM.jpeg" alt="Gabby The Guardian" loading="lazy" width="400" height="300">
+                                                <img src="src/images/optimized/dogs/anakkin/MATZ0842.jpg" alt="Mandalorian, Toy Poodle" loading="lazy" width="400" height="300">
                                             </div>
                                             <div class="dog-slider__slide">
-                                                <img src="src/images/dogs/gaby/WhatsApp%20Image%202026-04-14%20at%205.01.45%20PM.jpeg" alt="Gabby The Guardian" loading="lazy" width="400" height="300">
+                                                <img src="src/images/optimized/dogs/anakkin/MATZ0852.jpg" alt="Mandalorian, Toy Poodle" loading="lazy" width="400" height="300">
+                                            </div>
+                                            <div class="dog-slider__slide">
+                                                <img src="src/images/optimized/dogs/anakkin/MATZ0862.jpg" alt="Mandalorian, Toy Poodle" loading="lazy" width="400" height="300">
                                             </div>
                                         </div>
-                                        <button type="button" class="dog-slider__nav dog-slider__nav--prev" aria-label="Previous photo of Gabby The Guardian"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
-                                        <button type="button" class="dog-slider__nav dog-slider__nav--next" aria-label="Next photo of Gabby The Guardian"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                                        <button type="button" class="dog-slider__nav dog-slider__nav--prev" aria-label="Previous photo of Mandalorian"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                                        <button type="button" class="dog-slider__nav dog-slider__nav--next" aria-label="Next photo of Mandalorian"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
                                         <div class="dog-slider__dots" role="group" aria-label="Photo indicators">
-                                            <button type="button" class="dog-slider__dot is-active" aria-label="Photo 1 of 2" aria-current="true"></button>
-                                            <button type="button" class="dog-slider__dot" aria-label="Photo 2 of 2"></button>
+                                            <button type="button" class="dog-slider__dot is-active" aria-label="Photo 1 of 3" aria-current="true"></button>
+                                            <button type="button" class="dog-slider__dot" aria-label="Photo 2 of 3"></button>
+                                            <button type="button" class="dog-slider__dot" aria-label="Photo 3 of 3"></button>
                                         </div>
                                     </div>
-                                    <div class="portfolio-overlay"><h4>Gabby The Guardian (Black GSD)</h4></div>
+                                    <div class="portfolio-overlay"><h4>Mandalorian 🇮🇳 (Toy Poodle)</h4></div>
                                 </div>
                             </div>
                             <!-- Jack Sparrow -->
@@ -1057,10 +1064,10 @@ SEO optimized for Google search rankings
                                     <div class="dog-slider" data-dog-slider tabindex="0" aria-label="Photos of Jack Sparrow">
                                         <div class="dog-slider__slides">
                                             <div class="dog-slider__slide is-active">
-                                                <img src="src/images/dogs/Jack%20sparrow/WhatsApp%20Image%202026-04-14%20at%205.17.04%20PM%281%29.jpeg" alt="Jack Sparrow, Mini Poodle" loading="lazy" width="400" height="300">
+                                                <img src="src/images/optimized/dogs/Jack%20sparrow/WhatsApp%20Image%202026-04-14%20at%205.17.04%20PM%281%29.jpeg" alt="Jack Sparrow, Mini Poodle" loading="lazy" width="400" height="300">
                                             </div>
                                             <div class="dog-slider__slide">
-                                                <img src="src/images/dogs/Jack%20sparrow/WhatsApp%20Image%202026-04-14%20at%205.17.27%20PM%281%29.jpeg" alt="Jack Sparrow, Mini Poodle" loading="lazy" width="400" height="300">
+                                                <img src="src/images/optimized/dogs/Jack%20sparrow/WhatsApp%20Image%202026-04-14%20at%205.17.27%20PM%281%29.jpeg" alt="Jack Sparrow, Mini Poodle" loading="lazy" width="400" height="300">
                                             </div>
                                         </div>
                                         <button type="button" class="dog-slider__nav dog-slider__nav--prev" aria-label="Previous photo of Jack Sparrow"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
@@ -1081,57 +1088,143 @@ SEO optimized for Google search rankings
                 <div class="championship-lineage championship-lineage--full-row" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
                     <h3><i class="fas fa-trophy" aria-hidden="true"></i> Champion Lineage</h3>
                     <p>Verified champion bloodlines from AKC 🇺🇸 and KCI 🇮🇳 records.</p>
-                    <div class="championship-lineage-grid">
-                        <section class="championship-lineage-card" aria-label="Anakin lineage section">
-                            <h4>🏆 Anakin Skywalker's Father - AKC Champion</h4>
-                            <div class="dog-slider championship-lineage-slider" data-dog-slider tabindex="0" aria-label="Championship photos for Anakin's father">
-                                <div class="dog-slider__slides">
-                                    <div class="dog-slider__slide is-active">
-                                        <img src="src/images/championship/anakin/11kbyebv24f71gtnnwkg05o7t5xu.jpeg" alt="AKC championship photo of Anakin Skywalker's father" loading="lazy">
+                    <div class="championship-lineage-group" aria-label="Poodle champion lineage">
+                        <div class="championship-lineage-grid">
+                            <section class="championship-lineage-card" aria-label="Anakin lineage section">
+                                <h4>🏆 Anakin Skywalker's Father - AKC Champion</h4>
+                                <div class="dog-slider championship-lineage-slider" data-dog-slider tabindex="0" aria-label="Championship photos for Anakin's father">
+                                    <div class="dog-slider__slides">
+                                        <div class="dog-slider__slide is-active">
+                                            <img src="src/images/championship/anakin/11kbyebv24f71gtnnwkg05o7t5xu.jpeg" alt="AKC championship photo of Anakin Skywalker's father" loading="lazy">
+                                        </div>
+                                        <div class="dog-slider__slide">
+                                            <img src="src/images/championship/anakin/85pint4v7t9z1m9vsbygy8o1sjpd.jpeg" alt="AKC ring photo of Anakin Skywalker's father" loading="lazy">
+                                        </div>
+                                        <div class="dog-slider__slide">
+                                            <img src="src/images/championship/anakin/ags629l4a5f0fuxuqp82l6yzm4ax.jpeg" alt="AKC winning lineup photo of Anakin Skywalker's father" loading="lazy">
+                                        </div>
                                     </div>
-                                    <div class="dog-slider__slide">
-                                        <img src="src/images/championship/anakin/85pint4v7t9z1m9vsbygy8o1sjpd.jpeg" alt="AKC ring photo of Anakin Skywalker's father" loading="lazy">
-                                    </div>
-                                    <div class="dog-slider__slide">
-                                        <img src="src/images/championship/anakin/ags629l4a5f0fuxuqp82l6yzm4ax.jpeg" alt="AKC winning lineup photo of Anakin Skywalker's father" loading="lazy">
+                                    <button type="button" class="dog-slider__nav dog-slider__nav--prev" aria-label="Previous Anakin lineage photo"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                                    <button type="button" class="dog-slider__nav dog-slider__nav--next" aria-label="Next Anakin lineage photo"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                                    <div class="dog-slider__dots" role="group" aria-label="Anakin lineage photo indicators">
+                                        <button type="button" class="dog-slider__dot is-active" aria-label="Photo 1 of 3" aria-current="true"></button>
+                                        <button type="button" class="dog-slider__dot" aria-label="Photo 2 of 3"></button>
+                                        <button type="button" class="dog-slider__dot" aria-label="Photo 3 of 3"></button>
                                     </div>
                                 </div>
-                                <button type="button" class="dog-slider__nav dog-slider__nav--prev" aria-label="Previous Anakin lineage photo"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
-                                <button type="button" class="dog-slider__nav dog-slider__nav--next" aria-label="Next Anakin lineage photo"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
-                                <div class="dog-slider__dots" role="group" aria-label="Anakin lineage photo indicators">
-                                    <button type="button" class="dog-slider__dot is-active" aria-label="Photo 1 of 3" aria-current="true"></button>
-                                    <button type="button" class="dog-slider__dot" aria-label="Photo 2 of 3"></button>
-                                    <button type="button" class="dog-slider__dot" aria-label="Photo 3 of 3"></button>
-                                </div>
-                            </div>
-                            <p class="championship-lineage-stat">Anakin Skywalker (Mini Poodle): 10 Champions and 1 Grand Champion in 4 generations in AKC 🇺🇸.</p>
-                        </section>
+                                <p class="championship-lineage-stat">Anakin Skywalker (Mini Poodle): 10 Champions and 1 Grand Champion in 4 generations in AKC 🇺🇸.</p>
+                            </section>
 
-                        <section class="championship-lineage-card" aria-label="Jack Sparrow lineage section">
-                            <h4>🏅 Jack Sparrow's Father - AKC Champion</h4>
-                            <div class="dog-slider dog-slider--single championship-lineage-slider" data-dog-slider tabindex="0" aria-label="Championship photo for Jack Sparrow's father">
-                                <div class="dog-slider__slides">
-                                    <div class="dog-slider__slide is-active">
-                                        <img src="src/images/championship/jacksparrow/246368672026673319.jpeg" alt="AKC championship photo of Jack Sparrow's father" loading="lazy">
+                            <section class="championship-lineage-card" aria-label="Jack Sparrow lineage section">
+                                <h4>🏅 Jack Sparrow's Father - AKC Champion</h4>
+                                <div class="dog-slider dog-slider--single championship-lineage-slider" data-dog-slider tabindex="0" aria-label="Championship photo for Jack Sparrow's father">
+                                    <div class="dog-slider__slides">
+                                        <div class="dog-slider__slide is-active">
+                                            <img src="src/images/championship/jacksparrow/246368672026673319.jpeg" alt="AKC championship photo of Jack Sparrow's father" loading="lazy">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <p class="championship-lineage-stat">Jack Sparrow (Standard Poodle): 9 Champions in 4 generations in AKC 🇺🇸.</p>
-                        </section>
+                                <p class="championship-lineage-stat">Jack Sparrow (Standard Poodle): 9 Champions in 4 generations in AKC 🇺🇸.</p>
+                            </section>
 
-                        <section class="championship-lineage-card" aria-label="Gabby lineage section">
-                            <h4>🇮🇳 Gabby - KCI Champion Line</h4>
-                            <div class="dog-slider dog-slider--single championship-lineage-slider" data-dog-slider tabindex="0" aria-label="Lineage photo for Gabby">
-                                <div class="dog-slider__slides">
-                                    <div class="dog-slider__slide is-active">
-                                        <img src="src/images/dogs/gaby/WhatsApp%20Image%202026-04-14%20at%205.01.45%20PM.jpeg" alt="Gabby from KCI champion lineage" loading="lazy">
+                            <section class="championship-lineage-card" aria-label="Mandalorian lineage section">
+                                <h4>🇮🇳 Mandalorian - KCI Toy Poodle Lineage</h4>
+                                <div class="dog-slider dog-slider--single championship-lineage-slider" data-dog-slider tabindex="0" aria-label="Lineage photo for Mandalorian">
+                                    <div class="dog-slider__slides">
+                                        <div class="dog-slider__slide is-active">
+                                            <img src="src/images/optimized/dogs/anakkin/MATZ0842.jpg" alt="Mandalorian Toy Poodle lineage photo" loading="lazy">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <p class="championship-lineage-stat">Gabby (Black German Shepherd): 15 Champions in 5 generations in KCI 🇮🇳 (Kennel Club of India).</p>
-                        </section>
+                                <p class="championship-lineage-stat">Mandalorian 🇮🇳 (Toy Poodle): 6 Champions and 1 Grand Champion in KCI lineage.</p>
+                            </section>
+                        </div>
                     </div>
+
                 </div>
+
+                <!-- Dogs - German Shepherd program -->
+                <section id="gsd" class="dogs-section" aria-labelledby="dogs-heading" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="550">
+                    <div class="dogs-section__header">
+                        <h3 id="dogs-heading"><i class="fas fa-dog" aria-hidden="true"></i> Elite German Shepherd Dogs</h3>
+                        <p>Draco and Gabi are the parents of the upcoming German Shepherd puppies available with us. This pairing brings European working-line power, black long-coat glamour, straight-back structure, loyal hearts, sharp minds, high energy, and natural guarding instinct.</p>
+                        <div class="dogs-section__promise" aria-label="German Shepherd puppy qualities">
+                            <span><i class="fas fa-star" aria-hidden="true"></i> Beautiful Puppies</span>
+                            <span><i class="fas fa-shield-alt" aria-hidden="true"></i> Loyal Guardians</span>
+                            <span><i class="fas fa-route" aria-hidden="true"></i> Straight Back</span>
+                            <span><i class="fas fa-bolt" aria-hidden="true"></i> High Energy</span>
+                        </div>
+                    </div>
+
+                    <div class="dogs-profile-grid" role="list">
+                        <article class="dogs-profile-card dogs-profile-card--male" role="listitem" aria-label="Draco profile">
+                            <div class="dogs-profile-card__header">
+                                <h4>Vlad Dominus Draco 🇪🇺</h4>
+                                <p class="dogs-profile-card__identity"><strong>Male</strong><span>FCI Name: xxx</span><span>Call name: Draco</span></p>
+                            </div>
+                            <div class="dogs-profile-card__media dogs-profile-card__media--placeholder" aria-hidden="true">
+                                <div class="dogs-profile-card__placeholder-icon">
+                                    <i class="fas fa-dog" aria-hidden="true"></i>
+                                </div>
+                                <div class="dogs-profile-card__color-swatches">
+                                    <span class="dogs-profile-card__swatch dogs-profile-card__swatch--tan"></span>
+                                    <span class="dogs-profile-card__swatch dogs-profile-card__swatch--brown"></span>
+                                </div>
+                            </div>
+                            <div class="dogs-profile-card__body">
+                                <p class="dogs-profile-card__lineage"><strong>Lineage:</strong> Draco is Czech working-line, strengthened by his Romanian import father, with 6 title types across 5 generations of Draco's lineage: CACJ (x4), BH (x6), IPO1, IPO3 (x2), ZVV1 (x2), ZVV3.</p>
+                                <div class="dogs-title-highlights" aria-label="Draco title highlights">
+                                    <span><strong>👑 CACJ</strong> Premium Look &amp; Royal Status: guarantees head-turning, show-stopping beauty and a magnificent, regal structure that radiates pure status.</span>
+                                    <span><strong>🧠 IPO3</strong> World-Class Intelligence &amp; DNA: proves elite DNA for world-class intelligence, flawless obedience, and mind-blowing athletic agility.</span>
+                                    <span><strong>💀 ZVV3</strong> Extreme Rarity &amp; True Protection: a rare, legendary Czech military-grade title proving elite real-world guarding and bulletproof mental toughness.</span>
+                                </div>
+                                <p>Draco is the big-energy protector: bold, athletic, switched-on, and always ready for action, with royal champion looks on the outside and world-class intelligence, fierce loyalty, and true protective instinct on the inside.</p>
+                                <div class="dogs-traits" aria-label="Draco traits">
+                                    <span>Czech Working Line</span>
+                                    <span>European Import Sire</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="dogs-profile-card" role="listitem" aria-label="Gabi profile">
+                            <div class="dogs-profile-card__header">
+                                <h4>Archangel Gabriel</h4>
+                                <p class="dogs-profile-card__identity"><strong>Female</strong><span>KCI Name: Kiwi</span><span>Call name: Gabi</span></p>
+                            </div>
+                            <div class="dogs-profile-card__media">
+                                <div class="dog-slider" data-dog-slider tabindex="0" aria-label="Photos of Gabi">
+                                    <div class="dog-slider__slides">
+                                        <div class="dog-slider__slide is-active">
+                                            <img src="src/images/optimized/dogs/gaby/WhatsApp%20Image%202026-04-14%20at%205.01.45%20PM.jpeg" alt="Gabi, black long coat German Shepherd female" loading="lazy" width="600" height="420">
+                                        </div>
+                                        <div class="dog-slider__slide">
+                                            <img src="src/images/optimized/dogs/gaby/WhatsApp%20Image%202026-04-14%20at%205.00.50%20PM.jpeg" alt="Gabi, black long coat German Shepherd female" loading="lazy" width="600" height="420">
+                                        </div>
+                                    </div>
+                                    <button type="button" class="dog-slider__nav dog-slider__nav--prev" aria-label="Previous photo of Gabi"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                                    <button type="button" class="dog-slider__nav dog-slider__nav--next" aria-label="Next photo of Gabi"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                                    <div class="dog-slider__dots" role="group" aria-label="Photo indicators">
+                                        <button type="button" class="dog-slider__dot is-active" aria-label="Photo 1 of 2" aria-current="true"></button>
+                                        <button type="button" class="dog-slider__dot" aria-label="Photo 2 of 2"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dogs-profile-card__body">
+                                <p class="dogs-profile-card__lineage"><strong>Lineage:</strong> West German Show Line black long coat with 15 Champions in 5 generations in KCI.</p>
+                                <p class="dogs-profile-card__spotlight"><strong>🔥 The Black Panther in a Luxury Silk Robe 🔥</strong> Gabi looks like a sleek black panther with a lion's premium mane. Her rich, sweeping coat and elegant presence can turn an everyday walk into a red-carpet moment.</p>
+                                <p>Gabi brings beauty, brains, family sweetness, kid-friendly patience, and graceful guard-dog presence.</p>
+                                <div class="dogs-traits" aria-label="Gabi traits">
+                                    <span>West German Show Line</span>
+                                    <span>Black Long Coat</span>
+                                    <span>Straight Back</span>
+                                    <span>Loving Guardian</span>
+                                    <span>Stylish Beauty</span>
+                                    <span>Family Smart</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
             </div>
         </section>
     </main>
@@ -1239,11 +1332,11 @@ SEO optimized for Google search rankings
     <!-- ============================================ -->
     <!-- JAVASCRIPT LOADING (OPTIMIZED) -->
     <!-- ============================================ -->
-    <!-- Load AOS library asynchronously -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" async></script>
+    <!-- Load AOS before the main script to avoid init races -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
     
     <!-- Load main JavaScript with defer for better performance -->
-    <script src="src/js/script.js" defer></script>
+    <script src="src/js/script.js?v=1.4.35" defer></script>
     
     <!-- Mobile-specific JavaScript fix -->
     <script src="src/js/mobile-fix.js" defer></script>

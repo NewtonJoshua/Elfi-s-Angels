@@ -2482,6 +2482,16 @@ input::placeholder, textarea::placeholder {
     }
 }
 
+html body .floating-buttons.floating-buttons--compact,
+html body div.floating-buttons.floating-buttons--compact,
+.floating-buttons.floating-buttons.floating-buttons.floating-buttons.floating-buttons--compact {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: none !important;
+}
+
 /* Elfi's Angels — dog mini-sliders: one visible slide (loads after styles.css) */
 .about-portfolio .dog-slider__slides {
     overflow: hidden !important;

@@ -1,21 +1,23 @@
 // Service Worker for Elfi's Angels Website
 // Provides offline functionality and performance improvements
-// Network-first strategy with automatic update mechanism
+// Stale-while-revalidate for app shell, cache-first for images
 
-const CACHE_VERSION = '1.4.4';
+const CACHE_VERSION = '1.4.35';
 const CACHE_NAME = `elfis-angels-v${CACHE_VERSION}`;
 const UPDATE_CHECK_INTERVAL = 30000; // Check for updates every 30 seconds
 
 const STATIC_CACHE_URLS = [
     '/',
+    '/gsd',
     '/index.html',
-    '/src/css/styles.css',
-    '/src/css/premium-luxury.css',
+    '/src/css/styles.css?v=1.4.35',
+    '/src/css/premium-luxury.css?v=1.4.35',
     '/src/css/mobile-fix.css',
-    '/src/js/script.js',
+    '/src/js/script.js?v=1.4.35',
     '/src/js/mobile-fix.js',
     '/src/icons/logo.svg',
     '/src/images/hero-poodles.jpg',
+    '/src/images/optimized/dogs/cover/WhatsApp%20Image%202026-04-14%20at%205.36.57%20PM.jpeg',
     '/privacy-policy.html'
 ];
 
@@ -27,10 +29,7 @@ self.addEventListener('install', (event) => {
         caches.open(CACHE_NAME)
             .then((cache) => {
                 console.log('📦 Caching static resources...');
-                return cache.addAll(STATIC_CACHE_URLS.map(url => {
-                    // Add cache busting parameter to ensure fresh downloads
-                    return `${url}?v=${CACHE_VERSION}&t=${Date.now()}`;
-                }));
+                return cache.addAll(STATIC_CACHE_URLS);
             })
             .then(() => {
                 console.log('✅ Static resources cached successfully');
@@ -87,6 +86,26 @@ self.addEventListener('fetch', (event) => {
 
     // Skip non-same-origin requests
     if (!event.request.url.startsWith(self.location.origin)) {
+        return;
+    }
+
+    if (event.request.destination === 'image') {
+        event.respondWith(
+            caches.open(CACHE_NAME).then(cache => {
+                return cache.match(event.request).then(cachedResponse => {
+                    if (cachedResponse) {
+                        return cachedResponse;
+                    }
+
+                    return fetch(event.request).then(networkResponse => {
+                        if (networkResponse.status === 200) {
+                            cache.put(event.request, networkResponse.clone());
+                        }
+                        return networkResponse;
+                    });
+                });
+            })
+        );
         return;
     }
 

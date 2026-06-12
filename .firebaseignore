@@ -2,6 +2,10 @@
 
 ## .firebaserc
 # Firebase project configuration file
+.firebaserc
+.git/
+.firebase/
+firebase-debug.log
 
 ## node_modules
 node_modules/
